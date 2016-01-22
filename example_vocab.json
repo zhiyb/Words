@@ -1,0 +1,3419 @@
+{
+    "Lesson 1": [
+        {
+            "english": "I",
+            "kana": "わたし",
+            "yes": 1
+        },
+        {
+            "english": "you",
+            "kana": "あなた",
+            "yes": 2
+        },
+        {
+            "english": "That person, he, she",
+            "kana": "あの　ひと　／　あの　かた",
+            "kanji": "あの　人　／　あの　方",
+            "time": "2016-01-21T23:49:20",
+            "yes": 2
+        },
+        {
+            "english": "Mr., Ms.",
+            "kana": "～さん",
+            "yes": 2
+        },
+        {
+            "english": "Suffix offed added to a child's name",
+            "kana": "～ちゃん",
+            "yes": 1
+        },
+        {
+            "english": "Suffix meaning 'a national of'",
+            "kana": "～じん",
+            "kanji": "～人",
+            "yes": 2
+        },
+        {
+            "english": "Teacher, instructor (not used when referring to one's own job)",
+            "kana": "せんせい",
+            "kanji": "先生",
+            "yes": 2
+        },
+        {
+            "english": "Teacher, instructor",
+            "kana": "きょうし",
+            "kanji": "教師",
+            "yes": 2
+        },
+        {
+            "english": "student",
+            "kana": "がくせい",
+            "kanji": "学生",
+            "time": "2016-01-21T23:56:11",
+            "yes": 2
+        },
+        {
+            "english": "Company employee",
+            "kana": "かいしゃいん",
+            "kanji": "会社員",
+            "yes": 1
+        },
+        {
+            "english": "Employee of ~ company (used with a company's name)",
+            "kana": "しゃいん",
+            "kanji": "社員",
+            "time": "2016-01-21T22:55:50",
+            "yes": 2
+        },
+        {
+            "english": "Bank employee",
+            "kana": "ぎんこういん",
+            "kanji": "銀行員",
+            "no": 1,
+            "time": "2016-01-21T21:19:49",
+            "yes": 2
+        },
+        {
+            "english": "[medical] doctor",
+            "kana": "いしゃ",
+            "kanji": "医者",
+            "yes": 1
+        },
+        {
+            "english": "Researcher, doctor",
+            "kana": "けんきゅうしゃ",
+            "kanji": "研究者",
+            "time": 652679052,
+            "yes": 1
+        },
+        {
+            "english": "university",
+            "kana": "だいがく",
+            "kanji": "大学",
+            "yes": 2
+        },
+        {
+            "english": "hospital",
+            "kana": "びょういん",
+            "kanji": "病院",
+            "no": 2,
+            "time": "2016-01-21T23:47:01",
+            "yes": 2
+        },
+        {
+            "english": "who",
+            "kana": "だれ（どなた）",
+            "yes": 1
+        },
+        {
+            "english": "- years old",
+            "kana": "ーさい",
+            "kanji": "ー歳",
+            "yes": 1
+        },
+        {
+            "english": "How old",
+            "kana": "なんさい（おいくつ）",
+            "kanji": "何歳",
+            "time": "2016-01-21T21:15:29",
+            "yes": 2
+        },
+        {
+            "english": "yes",
+            "kana": "はい",
+            "yes": 3
+        },
+        {
+            "english": "no",
+            "kana": "いいえ",
+            "yes": 1
+        }
+    ],
+    "Lesson 2": [
+        {
+            "english": "This (thing here)",
+            "kana": "これ",
+            "yes": 1
+        },
+        {
+            "english": "This (thing near the listener)",
+            "kana": "それ",
+            "yes": 1
+        },
+        {
+            "english": "This (thing overe there)",
+            "kana": "あれ",
+            "yes": 2
+        },
+        {
+            "english": "This ～ here",
+            "kana": "この～",
+            "yes": 1
+        },
+        {
+            "english": "This ～ near the listener",
+            "kana": "その～",
+            "yes": 1
+        },
+        {
+            "english": "This ～ over there",
+            "kana": "あの～"
+        },
+        {
+            "english": "book",
+            "kana": "ほん",
+            "kanji": "本",
+            "yes": 1
+        },
+        {
+            "english": "dictionary",
+            "kana": "じしょ",
+            "kanji": "辞書",
+            "yes": 1
+        },
+        {
+            "english": "magazine",
+            "kana": "ざっし",
+            "kanji": "雑誌",
+            "no": 1,
+            "time": "2016-01-21T23:34:10",
+            "yes": 2
+        },
+        {
+            "english": "newspaper",
+            "kana": "しんぶん",
+            "kanji": "新聞",
+            "no": 1,
+            "time": "2016-01-21T23:49:50",
+            "yes": 1
+        },
+        {
+            "english": "notebook",
+            "kana": "ノート",
+            "yes": 2
+        },
+        {
+            "english": "Personal organiser",
+            "kana": "てちょう",
+            "kanji": "手帳",
+            "yes": 2
+        },
+        {
+            "english": "Business card",
+            "kana": "めいし",
+            "kanji": "名刺",
+            "no": 2,
+            "time": "2016-01-22T00:07:33",
+            "yes": 5
+        },
+        {
+            "english": "(credit) card",
+            "kana": "カード",
+            "yes": 1
+        },
+        {
+            "english": "pencil",
+            "kana": "えんぴつ",
+            "kanji": "鉛筆",
+            "yes": 1
+        },
+        {
+            "english": "Ballpoint pen",
+            "kana": "ボールペン",
+            "yes": 2
+        },
+        {
+            "english": "Propelling pencil",
+            "kana": "シャープペンシル"
+        },
+        {
+            "english": "key",
+            "kana": "かぎ",
+            "yes": 2
+        },
+        {
+            "english": "Watch, clock",
+            "kana": "とけい",
+            "kanji": "時計",
+            "no": 2,
+            "time": "2016-01-21T23:09:04",
+            "yes": 3
+        },
+        {
+            "english": "umbrella",
+            "kana": "かさ",
+            "kanji": "傘"
+        },
+        {
+            "english": "Bag, briefcase",
+            "kana": "かばん",
+            "kanji": "鞄",
+            "time": "2016-01-21T21:59:53",
+            "yes": 2
+        },
+        {
+            "english": "television",
+            "kana": "テレビ",
+            "time": "2016-01-21T20:48:52",
+            "yes": 2
+        },
+        {
+            "english": "radio",
+            "kana": "ラジオ",
+            "time": "2016-01-21T22:38:43",
+            "yes": 1
+        },
+        {
+            "english": "camera",
+            "kana": "カメラ",
+            "time": "2016-01-21T20:02:27",
+            "yes": 1
+        },
+        {
+            "english": "computer",
+            "kana": "コンピューター",
+            "time": "2016-01-21T19:59:13",
+            "yes": 1
+        },
+        {
+            "english": "Car, vehicle",
+            "kana": "くるま",
+            "kanji": "車",
+            "yes": 1
+        },
+        {
+            "english": "desk",
+            "kana": "つくえ",
+            "kanji": "机",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "chair",
+            "kana": "いす",
+            "kanji": "椅子",
+            "time": "2016-01-21T19:52:53",
+            "yes": 1
+        },
+        {
+            "english": "chocolate",
+            "kana": "チョコレート",
+            "no": 2,
+            "time": "2016-01-21T23:48:02",
+            "yes": 1
+        },
+        {
+            "english": "coffee",
+            "kana": "コーヒー",
+            "yes": 1
+        },
+        {
+            "english": "Souvenir, present",
+            "kana": "[お]みやげ",
+            "kanji": "土産",
+            "no": 1,
+            "yes": 1
+        },
+        {
+            "english": "The English language",
+            "kana": "えいご",
+            "kanji": "英語",
+            "yes": 1
+        },
+        {
+            "english": "The Japanese language",
+            "kana": "にほんご",
+            "kanji": "日本語"
+        },
+        {
+            "english": "～language",
+            "kana": "～ご",
+            "kanji": "～語",
+            "yes": 1
+        },
+        {
+            "english": "what",
+            "kana": "なん",
+            "kanji": "何",
+            "yes": 1
+        },
+        {
+            "english": "so",
+            "kana": "そう",
+            "time": "2016-01-21T21:39:23",
+            "yes": 2
+        }
+    ],
+    "Lesson 3": [
+        {
+            "english": "Here, this place",
+            "kana": "ここ",
+            "time": "2016-01-21T21:16:30",
+            "yes": 3
+        },
+        {
+            "english": "There, that place near the listner",
+            "kana": "そこ",
+            "time": "2016-01-21T22:38:35",
+            "yes": 2
+        },
+        {
+            "english": "That place over there",
+            "kana": "あそこ",
+            "yes": 2
+        },
+        {
+            "english": "Where, what place",
+            "kana": "どこ",
+            "time": "2016-01-21T20:52:41",
+            "yes": 2
+        },
+        {
+            "english": "This way, this place",
+            "kana": "こちら",
+            "yes": 1
+        },
+        {
+            "english": "That way, that place near the listener",
+            "kana": "そちら",
+            "yes": 1
+        },
+        {
+            "english": "That way, that place over there",
+            "kana": "あちら",
+            "time": "2016-01-21T23:50:36",
+            "yes": 1
+        },
+        {
+            "english": "Which way, where",
+            "kana": "どちら"
+        },
+        {
+            "english": "classroom",
+            "kana": "きょうしつ",
+            "kanji": "教室",
+            "yes": 1
+        },
+        {
+            "english": "Dining hall, canteen",
+            "kana": "しょくどう",
+            "kanji": "食堂",
+            "yes": 1
+        },
+        {
+            "english": "office",
+            "kana": "じむしょ",
+            "kanji": "事務所"
+        },
+        {
+            "english": "Conference room, meeting room",
+            "kana": "かいぎしつ",
+            "kanji": "会議室",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "Reception desk",
+            "kana": "うけつけ",
+            "kanji": "受付",
+            "time": "2016-01-21T22:55:25",
+            "yes": 2
+        },
+        {
+            "english": "lobby",
+            "kana": "ロビー",
+            "yes": 1
+        },
+        {
+            "english": "room",
+            "kana": "へや",
+            "kanji": "部屋",
+            "no": 1,
+            "time": "2016-01-21T23:53:27",
+            "yes": 1
+        },
+        {
+            "english": "Toilet, rest room",
+            "kana": "トイレ（おてあらい）",
+            "kanji": "お手洗い",
+            "time": "2016-01-21T21:20:46",
+            "yes": 2
+        },
+        {
+            "english": "staircase",
+            "kana": "かいだん",
+            "kanji": "階段",
+            "no": 1,
+            "time": "2016-01-21T20:48:39",
+            "yes": 3
+        },
+        {
+            "english": "Lift, elevator",
+            "kana": "エレベーター",
+            "yes": 2
+        },
+        {
+            "english": "escalator",
+            "kana": "エスカレーター",
+            "time": "2016-01-22T00:02:20",
+            "yes": 1
+        },
+        {
+            "english": "Vending machine",
+            "kana": "じどうはんばいき",
+            "kanji": "自動販売機",
+            "yes": 2
+        },
+        {
+            "english": "Telephone handset, telephone call",
+            "kana": "でんわ",
+            "kanji": "電話",
+            "yes": 1
+        },
+        {
+            "english": "country",
+            "kana": "[お]くに",
+            "kanji": "[お]国",
+            "yes": 1
+        },
+        {
+            "english": "company",
+            "kana": "かいしゃ",
+            "kanji": "会社",
+            "yes": 2
+        },
+        {
+            "english": "House, home",
+            "kana": "うち",
+            "yes": 1
+        },
+        {
+            "english": "shoes",
+            "kana": "くつ",
+            "kanji": "靴",
+            "no": 1,
+            "yes": 1
+        },
+        {
+            "english": "Tie, necktie",
+            "kana": "ネクタイ",
+            "yes": 1
+        },
+        {
+            "english": "wine",
+            "kana": "ワイン",
+            "yes": 1
+        },
+        {
+            "english": "Department, counter",
+            "kana": "うりば",
+            "kanji": "売り場",
+            "no": 1,
+            "time": "2016-01-21T20:17:54"
+        },
+        {
+            "english": "basement",
+            "kana": "ちか",
+            "kanji": "地下",
+            "yes": 1
+        },
+        {
+            "english": "-th floor",
+            "kana": "…かい（…がい）",
+            "kanji": "…階",
+            "no": 3
+        },
+        {
+            "english": "What floor",
+            "kana": "なんがい",
+            "kanji": "何階",
+            "no": 1,
+            "time": "2016-01-21T22:39:24"
+        },
+        {
+            "english": "-yen",
+            "kana": "…えん",
+            "kanji": "…円",
+            "time": "2016-01-21T23:50:17",
+            "yes": 3
+        },
+        {
+            "english": "How much",
+            "kana": "いくら",
+            "time": "2016-01-22T00:06:12",
+            "yes": 1
+        },
+        {
+            "english": "hundred",
+            "kana": "ひゃく",
+            "kanji": "百",
+            "time": "2016-01-21T22:36:44",
+            "yes": 1
+        },
+        {
+            "english": "thousand",
+            "kana": "せん",
+            "kanji": "千"
+        },
+        {
+            "english": "Ten thousand",
+            "kana": "まん",
+            "kanji": "万",
+            "time": "2016-01-21T21:35:00",
+            "yes": 2
+        }
+    ],
+    "Lesson 4": [
+        {
+            "english": "Get up, wake up",
+            "kana": "おきます",
+            "kanji": "起きます",
+            "yes": 2
+        },
+        {
+            "english": "Sleep, go to bed",
+            "kana": "ねます",
+            "kanji": "寝ます",
+            "no": 1,
+            "time": "2016-01-21T22:54:54",
+            "yes": 2
+        },
+        {
+            "english": "work",
+            "kana": "はたらきます",
+            "kanji": "働きます",
+            "no": 1,
+            "time": "2016-01-21T20:58:57",
+            "yes": 2
+        },
+        {
+            "english": "Take a rest, take a holiday",
+            "kana": "やすみます",
+            "kanji": "休みます",
+            "no": 1,
+            "time": "2016-01-21T21:01:41",
+            "yes": 3
+        },
+        {
+            "english": "study",
+            "kana": "べんきょうします",
+            "kanji": "勉強します"
+        },
+        {
+            "english": "finish",
+            "kana": "おわります",
+            "kanji": "終わります",
+            "no": 1,
+            "time": "2016-01-21T22:41:04",
+            "yes": 2
+        },
+        {
+            "english": "Department store",
+            "kana": "デパート",
+            "no": 4,
+            "time": "2016-01-22T00:11:41",
+            "yes": 3
+        },
+        {
+            "english": "bank",
+            "kana": "ぎんこう",
+            "kanji": "銀行",
+            "time": 1910245732,
+            "yes": 2
+        },
+        {
+            "english": "Post office",
+            "kana": "ゆうびんきょく",
+            "kanji": "郵便局",
+            "no": 4,
+            "time": "2016-01-21T20:02:59",
+            "yes": 1
+        },
+        {
+            "english": "library",
+            "kana": "としょかん",
+            "kanji": "図書館",
+            "no": 4,
+            "time": "2016-01-21T23:53:39",
+            "yes": 4
+        },
+        {
+            "english": "Art museum, art gallery",
+            "kana": "びじゅつかん",
+            "kanji": "美術館",
+            "yes": 1
+        },
+        {
+            "english": "now",
+            "kana": "いま",
+            "kanji": "今",
+            "yes": 2
+        },
+        {
+            "english": "- o'clock",
+            "kana": "ーじ",
+            "kanji": "ー時",
+            "yes": 2
+        },
+        {
+            "english": "- minute",
+            "kana": "ーふん（ーぷん）",
+            "kanji": "ー分",
+            "time": "2016-01-21T23:59:00",
+            "yes": 2
+        },
+        {
+            "english": "half",
+            "kana": "はん",
+            "kanji": "半"
+        },
+        {
+            "english": "What time",
+            "kana": "なんじ",
+            "kanji": "何時",
+            "yes": 2
+        },
+        {
+            "english": "What minute",
+            "kana": "なんぷん",
+            "kanji": "何分",
+            "yes": 2
+        },
+        {
+            "english": "a.m., morning",
+            "kana": "ごぜん",
+            "kanji": "午前",
+            "no": 1,
+            "time": "2016-01-21T23:37:39",
+            "yes": 3
+        },
+        {
+            "english": "p.m., afternoon",
+            "kana": "ごご",
+            "kanji": "午後",
+            "yes": 2
+        },
+        {
+            "english": "morning",
+            "kana": "あさ",
+            "kanji": "朝",
+            "time": "2016-01-22T00:00:16",
+            "yes": 3
+        },
+        {
+            "english": "Daytime, noon",
+            "kana": "ひる",
+            "kanji": "昼",
+            "time": "2016-01-22T00:00:21",
+            "yes": 2
+        },
+        {
+            "english": "Night, evening",
+            "kana": "ばん（よる）",
+            "kanji": "晩（夜）",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "The day before yesterday",
+            "kana": "おととい",
+            "yes": 1
+        },
+        {
+            "english": "yesterday",
+            "kana": "きのう",
+            "yes": 1
+        },
+        {
+            "english": "today",
+            "kana": "きょう",
+            "yes": 1
+        },
+        {
+            "english": "tomorrow",
+            "kana": "あした",
+            "yes": 1
+        },
+        {
+            "english": "The day after tomorrow",
+            "kana": "あさって",
+            "no": 1,
+            "time": "2016-01-21T20:08:10",
+            "yes": 2
+        },
+        {
+            "english": "This morning",
+            "kana": "けさ",
+            "time": "2016-01-21T23:53:56",
+            "yes": 3
+        },
+        {
+            "english": "This evening, tonight",
+            "kana": "こんばん",
+            "kanji": "今晩",
+            "yes": 1
+        },
+        {
+            "english": "Rest, a holiday, a day off",
+            "kana": "やすみ",
+            "kanji": "休み",
+            "yes": 2
+        },
+        {
+            "english": "lunchtime",
+            "kana": "ひるやすみ",
+            "kanji": "昼休み",
+            "yes": 1
+        },
+        {
+            "english": "Examination, test",
+            "kana": "しけん",
+            "kanji": "試験",
+            "no": 3,
+            "time": "2016-01-21T21:04:00",
+            "yes": 3
+        },
+        {
+            "english": "Meeting, conference",
+            "kana": "かいぎ",
+            "kanji": "会議",
+            "yes": 2
+        },
+        {
+            "english": "Film, movie",
+            "kana": "えいが",
+            "kanji": "映画",
+            "time": "2016-01-21T20:19:23",
+            "yes": 2
+        },
+        {
+            "english": "Every morning",
+            "kana": "まいあさ",
+            "kanji": "毎朝",
+            "yes": 1
+        },
+        {
+            "english": "Every night",
+            "kana": "まいばん",
+            "kanji": "毎晩",
+            "yes": 1
+        },
+        {
+            "english": "Every day",
+            "kana": "まいにち",
+            "kanji": "毎日",
+            "yes": 1
+        },
+        {
+            "english": "Monday",
+            "kana": "げつようび",
+            "kanji": "月曜日",
+            "time": "2016-01-21T22:32:01",
+            "yes": 2
+        },
+        {
+            "english": "Tuesday",
+            "kana": "かようび",
+            "kanji": "火曜日",
+            "yes": 2
+        },
+        {
+            "english": "Wednesday",
+            "kana": "すいようび",
+            "kanji": "水曜日",
+            "time": "2016-01-21T20:18:18",
+            "yes": 3
+        },
+        {
+            "english": "Thursday",
+            "kana": "もくようび",
+            "kanji": "木曜日",
+            "yes": 2
+        },
+        {
+            "english": "Friday",
+            "kana": "きんようび",
+            "kanji": "金曜日",
+            "yes": 1
+        },
+        {
+            "english": "Saturday",
+            "kana": "どようび",
+            "kanji": "土曜日",
+            "time": "2016-01-21T23:59:17",
+            "yes": 2
+        },
+        {
+            "english": "Sunday",
+            "kana": "にちようび",
+            "kanji": "日曜日",
+            "time": "2016-01-21T23:56:53",
+            "yes": 2
+        },
+        {
+            "english": "What day of the week",
+            "kana": "なんようび",
+            "kanji": "何曜日",
+            "time": "2016-01-21T23:46:03",
+            "yes": 2
+        },
+        {
+            "english": "From ~",
+            "kana": "～から",
+            "time": "2016-01-21T19:55:30",
+            "yes": 3
+        },
+        {
+            "english": "Up to ~, until ~",
+            "kana": "～まで",
+            "yes": 1
+        },
+        {
+            "english": "And (used to connect nouns)",
+            "kana": "～と～",
+            "time": "2016-01-21T20:56:48",
+            "yes": 2
+        },
+        {
+            "english": "That's tough, isn't it? (used to expressing sympathy)",
+            "kana": "たいへんですね。",
+            "kanji": "大変ですね。",
+            "no": 1,
+            "time": "2016-01-22T00:06:56",
+            "yes": 1
+        },
+        {
+            "english": "number",
+            "kana": "ばんごう",
+            "kanji": "番号",
+            "no": 2,
+            "time": "2016-01-21T21:03:53"
+        },
+        {
+            "english": "What number",
+            "kana": "なんばん",
+            "kanji": "何番",
+            "yes": 1
+        },
+        {
+            "english": "Your place",
+            "kana": "そちら",
+            "yes": 3
+        },
+        {
+            "english": "Hold a meeting",
+            "kana": "かいぎをします",
+            "kanji": "会議をします"
+        }
+    ],
+    "Lesson 5": [
+        {
+            "english": "go",
+            "kana": "いきます",
+            "kanji": "行きます",
+            "yes": 2
+        },
+        {
+            "english": "come",
+            "kana": "きます",
+            "kanji": "来ます",
+            "time": "2016-01-21T19:52:12",
+            "yes": 2
+        },
+        {
+            "english": "Go home, return",
+            "kana": "かえります",
+            "kanji": "帰ります",
+            "yes": 1
+        },
+        {
+            "english": "school",
+            "kana": "がっこう",
+            "kanji": "学校"
+        },
+        {
+            "english": "supermarket",
+            "kana": "スーパー",
+            "yes": 1
+        },
+        {
+            "english": "station",
+            "kana": "えき",
+            "kanji": "駅",
+            "time": "2016-01-22T00:05:01",
+            "yes": 1
+        },
+        {
+            "english": "Aeroplane, airplane",
+            "kana": "ひこうき",
+            "kanji": "飛行機",
+            "time": "2016-01-21T21:22:54",
+            "yes": 2
+        },
+        {
+            "english": "ship",
+            "kana": "ふね",
+            "kanji": "船",
+            "no": 2,
+            "yes": 2
+        },
+        {
+            "english": "Electric train",
+            "kana": "でんしゃ",
+            "kanji": "電車",
+            "yes": 2
+        },
+        {
+            "english": "Underground, subway",
+            "kana": "ちかてつ",
+            "kanji": "地下鉄",
+            "time": "2016-01-21T23:28:40",
+            "yes": 1
+        },
+        {
+            "english": "The Shinkansen, the bullet train bus",
+            "kana": "しんかんせん",
+            "kanji": "新幹線",
+            "no": 1,
+            "time": "2016-01-21T23:47:18",
+            "yes": 2
+        },
+        {
+            "english": "bus",
+            "kana": "バス",
+            "yes": 2
+        },
+        {
+            "english": "taxi",
+            "kana": "タクシー",
+            "time": "2016-01-21T23:39:59",
+            "yes": 2
+        },
+        {
+            "english": "bicycle",
+            "kana": "じてんしゃ",
+            "kanji": "自転車",
+            "yes": 1
+        },
+        {
+            "english": "On foot",
+            "kana": "あるいて",
+            "kanji": "歩いて",
+            "yes": 1
+        },
+        {
+            "english": "Person, people",
+            "kana": "ひと",
+            "kanji": "人",
+            "yes": 1
+        },
+        {
+            "english": "friend",
+            "kana": "ともだち",
+            "kanji": "友達",
+            "yes": 2
+        },
+        {
+            "english": "He, boyfriend, lover",
+            "kana": "かれ",
+            "kanji": "彼",
+            "yes": 1
+        },
+        {
+            "english": "She, girlfriend, lover",
+            "kana": "かのじょ",
+            "kanji": "彼女",
+            "yes": 1
+        },
+        {
+            "english": "family",
+            "kana": "かぞく",
+            "kanji": "家族",
+            "time": "2016-01-21T21:22:09",
+            "yes": 2
+        },
+        {
+            "english": "Alone, by oneself",
+            "kana": "ひとりで",
+            "kanji": "一人で",
+            "yes": 1
+        },
+        {
+            "english": "Last week",
+            "kana": "せんしゅう",
+            "kanji": "先週",
+            "time": "2016-01-21T19:59:49",
+            "yes": 2
+        },
+        {
+            "english": "This week",
+            "kana": "こんしゅう",
+            "kanji": "今週",
+            "yes": 1
+        },
+        {
+            "english": "Next week",
+            "kana": "らいしゅう",
+            "kanji": "来週",
+            "time": "2016-01-21T23:39:01",
+            "yes": 1
+        },
+        {
+            "english": "Last month",
+            "kana": "せんげつ",
+            "kanji": "先月",
+            "time": "2016-01-21T22:15:09",
+            "yes": 2
+        },
+        {
+            "english": "This month",
+            "kana": "こんげつ",
+            "kanji": "今月",
+            "no": 2,
+            "time": "2016-01-21T21:55:06",
+            "yes": 2
+        },
+        {
+            "english": "Next month",
+            "kana": "らいげつ",
+            "kanji": "来月",
+            "yes": 1
+        },
+        {
+            "english": "Last year",
+            "kana": "きょねん",
+            "kanji": "去年",
+            "no": 4,
+            "time": "2016-01-22T00:02:48"
+        },
+        {
+            "english": "This year",
+            "kana": "ことし",
+            "time": "2016-01-21T21:11:24",
+            "yes": 2
+        },
+        {
+            "english": "Next year",
+            "kana": "らいねん",
+            "kanji": "来年",
+            "yes": 2
+        },
+        {
+            "english": "-th year",
+            "kana": "ーねん",
+            "kanji": "ー年",
+            "yes": 2
+        },
+        {
+            "english": "What year",
+            "kana": "なんねん",
+            "kanji": "何年",
+            "time": "2016-01-21T23:38:11",
+            "yes": 2
+        },
+        {
+            "english": "-th month of the year",
+            "kana": "ーがつ",
+            "kanji": "ー月",
+            "yes": 1
+        },
+        {
+            "english": "What month",
+            "kana": "なんがつ",
+            "kanji": "何月",
+            "no": 1,
+            "time": "2016-01-21T23:58:03"
+        },
+        {
+            "english": "First day of the month",
+            "kana": "ついたち",
+            "kanji": "1日",
+            "yes": 2
+        },
+        {
+            "english": "Second, two days",
+            "kana": "ふつか",
+            "kanji": "2日",
+            "yes": 1
+        },
+        {
+            "english": "Third, three days",
+            "kana": "みっか",
+            "kanji": "3日",
+            "yes": 2
+        },
+        {
+            "english": "Fourth, four days",
+            "kana": "よっか",
+            "kanji": "4日",
+            "yes": 2
+        },
+        {
+            "english": "Fifth, five days",
+            "kana": "いつか",
+            "kanji": "5日",
+            "no": 1,
+            "time": "2016-01-22T00:05:38",
+            "yes": 1
+        },
+        {
+            "english": "Sixth, six days",
+            "kana": "むいか",
+            "kanji": "6日",
+            "yes": 2
+        },
+        {
+            "english": "Seventh, seven days",
+            "kana": "なのか",
+            "kanji": "7日",
+            "time": "2016-01-21T19:50:34",
+            "yes": 1
+        },
+        {
+            "english": "Eighth, eight days",
+            "kana": "ようか",
+            "kanji": "8日",
+            "yes": 1
+        },
+        {
+            "english": "Ninth, nine days",
+            "kana": "ここのか",
+            "kanji": "9日"
+        },
+        {
+            "english": "Tenth, ten days",
+            "kana": "とおか",
+            "kanji": "10日",
+            "time": "2016-01-21T20:16:57",
+            "yes": 1
+        },
+        {
+            "english": "Fourteenth, fourteen days",
+            "kana": "じゅうよっか",
+            "kanji": "14日",
+            "time": "2016-01-21T20:02:14",
+            "yes": 2
+        },
+        {
+            "english": "Twentieth, twenty days",
+            "kana": "はつか",
+            "kanji": "20日",
+            "no": 1
+        },
+        {
+            "english": "Twenty-fourth, twenty-four days",
+            "kana": "にじゅうよっか",
+            "kanji": "24日",
+            "yes": 1
+        },
+        {
+            "english": "-th day of the month, -day(s)",
+            "kana": "ーにち",
+            "kanji": "ー日",
+            "yes": 1
+        },
+        {
+            "english": "Which day of the month, how many days",
+            "kana": "なんにち",
+            "kanji": "何日",
+            "yes": 1
+        },
+        {
+            "english": "when",
+            "kana": "いつ",
+            "yes": 1
+        },
+        {
+            "english": "birthday",
+            "kana": "たんじょうび",
+            "kanji": "誕生日",
+            "no": 2,
+            "time": "2016-01-22T00:03:44"
+        },
+        {
+            "english": "Yes, it is.",
+            "kana": "そうですね。",
+            "time": "2016-01-21T23:26:22",
+            "yes": 3
+        },
+        {
+            "english": "Thank you very much.",
+            "kana": "どうもありがとうございました。",
+            "yes": 2
+        },
+        {
+            "english": "You're welcome.\nDon't mention it.",
+            "kana": "どういたしまして。",
+            "no": 1,
+            "time": "2016-01-21T23:57:51"
+        },
+        {
+            "english": "Platform -, -th platform",
+            "kana": "－ばんせん",
+            "kanji": "－番線",
+            "time": "2016-01-21T22:25:43",
+            "yes": 2
+        },
+        {
+            "english": "next",
+            "kana": "つぎの",
+            "kanji": "次の",
+            "no": 2,
+            "yes": 2
+        },
+        {
+            "english": "Local (train)",
+            "kana": "ふつう",
+            "kanji": "普通",
+            "no": 3,
+            "time": "2016-01-21T22:38:19",
+            "yes": 1
+        },
+        {
+            "english": "rapid",
+            "kana": "きゅうこう",
+            "kanji": "急行",
+            "no": 3,
+            "time": "2016-01-21T22:03:15",
+            "yes": 1
+        },
+        {
+            "english": "express",
+            "kana": "とっきゅう",
+            "kanji": "特急",
+            "no": 2,
+            "time": "2016-01-22T00:12:09"
+        }
+    ],
+    "Lesson 6": [
+        {
+            "english": "eat",
+            "kana": "たべます",
+            "kanji": "食べます",
+            "yes": 2
+        },
+        {
+            "english": "drink",
+            "kana": "のみます",
+            "kanji": "飲みます",
+            "yes": 2
+        },
+        {
+            "english": "Smoke [a cigrette]",
+            "kana": "すいます［たばこを～］",
+            "kanji": "吸います",
+            "yes": 1
+        },
+        {
+            "english": "See, look at, watch",
+            "kana": "みます",
+            "kanji": "見ます",
+            "time": "2016-01-21T22:31:42",
+            "yes": 1
+        },
+        {
+            "english": "Hear, listen",
+            "kana": "ききます",
+            "kanji": "聞きます",
+            "time": "2016-01-21T21:51:56",
+            "yes": 2
+        },
+        {
+            "english": "read",
+            "kana": "よみます",
+            "kanji": "読みます",
+            "time": "2016-01-21T20:40:05",
+            "yes": 2
+        },
+        {
+            "english": "Write (draw/paint)",
+            "kana": "かきます",
+            "kanji": "書きます",
+            "yes": 2
+        },
+        {
+            "english": "buy",
+            "kana": "かいます",
+            "kanji": "買います",
+            "time": 1060333120,
+            "yes": 3
+        },
+        {
+            "english": "Take [a photograph]",
+            "kana": "とります［しゃしんを～］",
+            "kanji": "撮ります［写真を～］"
+        },
+        {
+            "english": "Do, play",
+            "kana": "します",
+            "yes": 2
+        },
+        {
+            "english": "Meet [a friend]",
+            "kana": "あいます［ともだちに～］",
+            "kanji": "会います［友達に～］",
+            "no": 1,
+            "time": "2016-01-21T23:46:49",
+            "yes": 2
+        },
+        {
+            "english": "A meal, cooked rice",
+            "kana": "ごはん",
+            "time": "2016-01-21T20:08:44",
+            "yes": 2
+        },
+        {
+            "english": "breakfast",
+            "kana": "あさごはん",
+            "kanji": "朝ごはん",
+            "yes": 2
+        },
+        {
+            "english": "lunch",
+            "kana": "ひるごはん",
+            "kanji": "昼ごはん",
+            "time": "2016-01-21T23:55:37",
+            "yes": 1
+        },
+        {
+            "english": "supper",
+            "kana": "ばんごはん",
+            "kanji": "晩ごはん",
+            "yes": 1
+        },
+        {
+            "english": "bread",
+            "kana": "パン",
+            "yes": 3
+        },
+        {
+            "english": "egg",
+            "kana": "たまご",
+            "kanji": "卵",
+            "yes": 2
+        },
+        {
+            "english": "meat",
+            "kana": "にく",
+            "kanji": "肉",
+            "no": 1,
+            "time": "2016-01-21T23:58:16"
+        },
+        {
+            "english": "fish",
+            "kana": "さかな",
+            "kanji": "魚",
+            "no": 6,
+            "time": "2016-01-21T23:27:19"
+        },
+        {
+            "english": "vegetable",
+            "kana": "やさい",
+            "kanji": "野菜",
+            "time": "2016-01-21T19:50:24",
+            "yes": 3
+        },
+        {
+            "english": "fruit",
+            "kana": "くだもの",
+            "kanji": "果物",
+            "yes": 1
+        },
+        {
+            "english": "water",
+            "kana": "みず",
+            "kanji": "水",
+            "time": "2016-01-21T23:33:32",
+            "yes": 1
+        },
+        {
+            "english": "Tea, green tea",
+            "kana": "おちゃ",
+            "kanji": "お茶",
+            "yes": 1
+        },
+        {
+            "english": "Black tea",
+            "kana": "こうちゃ",
+            "kanji": "紅茶",
+            "no": 2,
+            "time": "2016-01-21T21:58:17",
+            "yes": 3
+        },
+        {
+            "english": "milk",
+            "kana": "ぎゅうにゅう（ミルク）",
+            "kanji": "牛乳",
+            "no": 3,
+            "time": "2016-01-21T23:50:12",
+            "yes": 3
+        },
+        {
+            "english": "juice",
+            "kana": "ジュース"
+        },
+        {
+            "english": "beer",
+            "kana": "ビール",
+            "no": 1,
+            "time": "2016-01-21T21:55:15",
+            "yes": 2
+        },
+        {
+            "english": "Alcohol, Japanese rice wine",
+            "kana": "［お］さけ",
+            "kanji": "［お］酒",
+            "time": "2016-01-21T23:38:02",
+            "yes": 1
+        },
+        {
+            "english": "Tobacco, cigarette",
+            "kana": "たばこ",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "letter",
+            "kana": "てがみ",
+            "kanji": "手紙",
+            "no": 3,
+            "time": "2016-01-21T21:20:54",
+            "yes": 1
+        },
+        {
+            "english": "report",
+            "kana": "レポート",
+            "yes": 1
+        },
+        {
+            "english": "photograph",
+            "kana": "しゃしん",
+            "kanji": "写真",
+            "time": "2016-01-21T23:58:53",
+            "yes": 3
+        },
+        {
+            "english": "Video [tape], video deck",
+            "kana": "ビデオ",
+            "time": "2016-01-21T19:55:04",
+            "yes": 1
+        },
+        {
+            "english": "Shop, store",
+            "kana": "みせ",
+            "kanji": "店",
+            "time": "2016-01-21T23:43:32",
+            "yes": 2
+        },
+        {
+            "english": "garden",
+            "kana": "にわ",
+            "kanji": "庭",
+            "no": 1,
+            "time": "2016-01-21T21:37:30",
+            "yes": 2
+        },
+        {
+            "english": "homework",
+            "kana": "しゅくだい",
+            "kanji": "宿題",
+            "no": 2,
+            "time": "2016-01-21T21:40:34",
+            "yes": 1
+        },
+        {
+            "english": "tennis",
+            "kana": "テニス",
+            "yes": 2
+        },
+        {
+            "english": "Soccer, football",
+            "kana": "サッカー",
+            "yes": 1
+        },
+        {
+            "english": "Cherry-blossom viewing",
+            "kana": "［お］はなみ",
+            "kanji": "［お］花見",
+            "time": "2016-01-21T20:59:47",
+            "yes": 2
+        },
+        {
+            "english": "what",
+            "kana": "なに",
+            "kanji": "何",
+            "yes": 1
+        },
+        {
+            "english": "together",
+            "kana": "いっしょに",
+            "no": 2,
+            "time": 456368396
+        },
+        {
+            "english": "A little while, a little bit",
+            "kana": "ちょっと",
+            "time": "2016-01-21T21:01:33",
+            "yes": 2
+        },
+        {
+            "english": "Always, usually",
+            "kana": "いつも",
+            "time": "2016-01-21T20:11:09",
+            "yes": 2
+        },
+        {
+            "english": "sometimes",
+            "kana": "ときどき",
+            "kanji": "時々",
+            "yes": 2
+        },
+        {
+            "english": "After that, and then",
+            "kana": "それから",
+            "no": 1,
+            "time": "2016-01-21T23:52:44",
+            "yes": 2
+        },
+        {
+            "english": "yes",
+            "kana": "ええ",
+            "time": "2016-01-21T23:37:47",
+            "yes": 2
+        },
+        {
+            "english": "That's good.",
+            "kana": "いいですね。",
+            "yes": 2
+        },
+        {
+            "english": "I see.",
+            "kana": "わかりました。",
+            "time": "2016-01-21T20:21:17",
+            "yes": 1
+        },
+        {
+            "english": "Yes? (lit: What is it?)",
+            "kana": "なんですか。",
+            "kanji": "何ですか。",
+            "time": "2016-01-21T23:45:04",
+            "yes": 2
+        },
+        {
+            "english": "See you [tomorrow].",
+            "kana": "じゃ、また［あした］。",
+            "no": 2,
+            "time": "2016-01-21T23:34:27",
+            "yes": 1
+        }
+    ],
+    "Lesson 7": [
+        {
+            "english": "Cut, slice",
+            "kana": "きります",
+            "kanji": "切ります",
+            "yes": 1
+        },
+        {
+            "english": "send",
+            "kana": "おくります",
+            "kanji": "送ります",
+            "no": 5,
+            "time": "2016-01-21T23:27:56",
+            "yes": 2
+        },
+        {
+            "english": "give",
+            "kana": "あげます",
+            "yes": 1
+        },
+        {
+            "english": "receive",
+            "kana": "もらいます",
+            "time": "2016-01-21T20:01:23",
+            "yes": 2
+        },
+        {
+            "english": "lend",
+            "kana": "かします",
+            "kanji": "貸します",
+            "yes": 1
+        },
+        {
+            "english": "borrow",
+            "kana": "かります",
+            "kanji": "借ります",
+            "time": "2016-01-21T20:05:07",
+            "yes": 1
+        },
+        {
+            "english": "teach",
+            "kana": "おしえます",
+            "kanji": "教えます",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "learn",
+            "kana": "ならいます",
+            "kanji": "習います",
+            "no": 2,
+            "time": "2016-01-21T23:53:50",
+            "yes": 2
+        },
+        {
+            "english": "Make [a telephone call]",
+            "kana": "かけます［でんわを～ ］",
+            "kanji": "［電話を～］",
+            "no": 1,
+            "time": "2016-01-21T21:55:41",
+            "yes": 2
+        },
+        {
+            "english": "Hand, arm",
+            "kana": "て",
+            "kanji": "手",
+            "yes": 1
+        },
+        {
+            "english": "chopsticks",
+            "kana": "はし",
+            "no": 3,
+            "time": "2016-01-22T00:05:48",
+            "yes": 1
+        },
+        {
+            "english": "spoon",
+            "kana": "スプーン",
+            "yes": 2
+        },
+        {
+            "english": "knife",
+            "kana": "ナイフ",
+            "no": 3,
+            "time": "2016-01-21T23:08:43",
+            "yes": 3
+        },
+        {
+            "english": "fork",
+            "kana": "フォーク",
+            "yes": 1
+        },
+        {
+            "english": "scissors",
+            "kana": "はさみ",
+            "yes": 1
+        },
+        {
+            "english": "Personal computer",
+            "kana": "パソコン",
+            "no": 1,
+            "time": "2016-01-21T21:23:25",
+            "yes": 1
+        },
+        {
+            "english": "Mobile phone, cell phone",
+            "kana": "ケータイ",
+            "no": 4
+        },
+        {
+            "english": "e-mail",
+            "kana": "メール",
+            "yes": 2
+        },
+        {
+            "english": "New Year's greeting card",
+            "kana": "ねんがじょう",
+            "kanji": "年賀状",
+            "no": 4,
+            "time": "2016-01-22T00:03:07",
+            "yes": 1
+        },
+        {
+            "english": "punch",
+            "kana": "パンチ",
+            "time": "2016-01-21T21:59:26",
+            "yes": 1
+        },
+        {
+            "english": "stapler",
+            "kana": "ホッチキス",
+            "yes": 2
+        },
+        {
+            "english": "Sellotape, Scotch rape, clear adhesive",
+            "kana": "セロテープ",
+            "no": 2,
+            "time": "2016-01-21T21:46:13"
+        },
+        {
+            "english": "Rubber, eraser",
+            "kana": "けしゴム",
+            "kanji": "消しゴム",
+            "yes": 2
+        },
+        {
+            "english": "paper",
+            "kana": "かみ",
+            "kanji": "紙",
+            "time": "2016-01-21T21:42:51",
+            "yes": 2
+        },
+        {
+            "english": "Flower, blossom",
+            "kana": "はな",
+            "kanji": "花",
+            "yes": 2
+        },
+        {
+            "english": "shirt",
+            "kana": "シャツ",
+            "no": 2,
+            "time": "2016-01-21T20:57:19",
+            "yes": 3
+        },
+        {
+            "english": "Present, gift",
+            "kana": "プレゼント",
+            "no": 1,
+            "time": "2016-01-21T23:45:45"
+        },
+        {
+            "english": "Luggage, baggage, parcel",
+            "kana": "にもつ",
+            "kanji": "荷物",
+            "yes": 2
+        },
+        {
+            "english": "money",
+            "kana": "おかね",
+            "kanji": "お金"
+        },
+        {
+            "english": "ticket (hiragana)",
+            "kana": "きっぷ",
+            "kanji": "切符",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "Christmas",
+            "kana": "クリスマス",
+            "yes": 1
+        },
+        {
+            "english": "(my) father",
+            "kana": "ちち",
+            "yes": 2
+        },
+        {
+            "english": "(my) mother",
+            "kana": "はは",
+            "yes": 2
+        },
+        {
+            "english": "(someone else's) father\n(also used to address one's own father)",
+            "kana": "おとうさん",
+            "kanji": "お父さん",
+            "time": "2016-01-21T20:12:40",
+            "yes": 2
+        },
+        {
+            "english": "(someone else's) mother\n(also used to address one's own mother)",
+            "kana": "おかあさん",
+            "kanji": "お母さん",
+            "yes": 1
+        },
+        {
+            "english": "already",
+            "kana": "もう",
+            "yes": 2
+        },
+        {
+            "english": "Not yet",
+            "kana": "まだ",
+            "yes": 2
+        },
+        {
+            "english": "From now on, soon",
+            "kana": "これから",
+            "yes": 1
+        },
+        {
+            "english": "What a nice [~]!",
+            "kana": "［～、］すてきですね。",
+            "time": "2016-01-21T23:51:06",
+            "yes": 2
+        },
+        {
+            "english": "How nice of you to come. (lit. Welcome.)",
+            "kana": "いらっしゃい。"
+        },
+        {
+            "english": "Do come in.",
+            "kana": "どうぞおあがりください。",
+            "kanji": "どうぞお上がりください。",
+            "no": 3,
+            "time": "2016-01-21T23:33:21"
+        },
+        {
+            "english": "May I? (lit. I commit an incivility)",
+            "kana": "しつれいします。",
+            "kanji": "失礼します。",
+            "yes": 1
+        },
+        {
+            "english": "Won't you have [~]?\nWould you like to have [~]?\n(used when offering something)",
+            "kana": "［～は］いかがですか。",
+            "time": "2016-01-21T20:39:49",
+            "yes": 2
+        },
+        {
+            "english": "Thank you. / I accept.\n(said before starting to eat or drink)",
+            "kana": "いただきます。",
+            "no": 1,
+            "yes": 1
+        },
+        {
+            "english": "That was delicious.\n(said after eating or drinking)",
+            "kana": "ごちそうさま［でした］。",
+            "time": "2016-01-21T23:48:53",
+            "yes": 2
+        }
+    ],
+    "Lesson 8": [
+        {
+            "english": "handsome",
+            "kana": "ハンサム［な］",
+            "yes": 2
+        },
+        {
+            "english": "Beautiful, clean",
+            "kana": "きれい［な］",
+            "yes": 2
+        },
+        {
+            "english": "quiet",
+            "kana": "しずか［な］",
+            "kanji": "静か［な］",
+            "no": 1,
+            "time": "2016-01-22T00:13:22",
+            "yes": 2
+        },
+        {
+            "english": "lively",
+            "kana": "にぎやか［な］",
+            "no": 1,
+            "time": "2016-01-22T00:03:21",
+            "yes": 1
+        },
+        {
+            "english": "famous",
+            "kana": "ゆうめい［な］",
+            "kanji": "有名［な］",
+            "no": 2,
+            "time": "2016-01-21T23:36:58",
+            "yes": 2
+        },
+        {
+            "english": "Helpful, kind, considerate (not used about one's own family members)",
+            "kana": "しんせつ［な］",
+            "kanji": "親切［な］",
+            "no": 2,
+            "time": "2016-01-22T00:09:12",
+            "yes": 3
+        },
+        {
+            "english": "Healthy, energetic, cheerful",
+            "kana": "げんき［な］",
+            "kanji": "元気［な］",
+            "time": "2016-01-21T22:35:44",
+            "yes": 2
+        },
+        {
+            "english": "Free (time)",
+            "kana": "ひま［な］",
+            "kanji": "暇［な］",
+            "yes": 1
+        },
+        {
+            "english": "convenient",
+            "kana": "べんり［な］",
+            "kanji": "便利［な］",
+            "no": 3,
+            "time": "2016-01-21T23:38:35"
+        },
+        {
+            "english": "Fine, nice, wonderful",
+            "kana": "すてき［な］",
+            "yes": 1
+        },
+        {
+            "english": "Big, large",
+            "kana": "おおきい",
+            "kanji": "大きい",
+            "time": "2016-01-21T20:45:42",
+            "yes": 1
+        },
+        {
+            "english": "Small, little",
+            "kana": "ちいさい",
+            "kanji": "小さい",
+            "yes": 2
+        },
+        {
+            "english": "New, fresh",
+            "kana": "あたらしい",
+            "kanji": "新しい",
+            "time": "2016-01-21T20:47:59",
+            "yes": 2
+        },
+        {
+            "english": "Old (not used to describe a person's age)",
+            "kana": "ふるい",
+            "kanji": "古い",
+            "time": "2016-01-21T21:27:10",
+            "yes": 2
+        },
+        {
+            "english": "good",
+            "kana": "いい（よい）",
+            "yes": 1
+        },
+        {
+            "english": "bad",
+            "kana": "わるい",
+            "kanji": "悪い",
+            "no": 2,
+            "time": "2016-01-21T21:52:23",
+            "yes": 3
+        },
+        {
+            "english": "hot",
+            "kana": "あつい",
+            "kanji": "暑い、熱い",
+            "no": 1,
+            "time": "2016-01-21T21:14:05",
+            "yes": 1
+        },
+        {
+            "english": "Cold (referring to temperature)",
+            "kana": "さむい",
+            "kanji": "寒い",
+            "yes": 1
+        },
+        {
+            "english": "Cold (referring to touch)",
+            "kana": "つめたい",
+            "kanji": "冷たい",
+            "time": "2016-01-21T21:21:56",
+            "yes": 2
+        },
+        {
+            "english": "difficult",
+            "kana": "むずかしい",
+            "kanji": "難しい",
+            "no": 2,
+            "time": "2016-01-21T20:34:17",
+            "yes": 2
+        },
+        {
+            "english": "easy",
+            "kana": "やさしい",
+            "kanji": "易しい",
+            "yes": 1
+        },
+        {
+            "english": "Expensive, tall, high",
+            "kana": "たかい",
+            "kanji": "高い",
+            "yes": 1
+        },
+        {
+            "english": "Inexpensive, cheap",
+            "kana": "やすい",
+            "kanji": "安い",
+            "no": 1,
+            "time": "2016-01-22T00:05:44",
+            "yes": 2
+        },
+        {
+            "english": "low",
+            "kana": "ひくい",
+            "kanji": "低い",
+            "no": 4,
+            "time": "2016-01-22T00:00:33"
+        },
+        {
+            "english": "interesting",
+            "kana": "おもしろい",
+            "yes": 1
+        },
+        {
+            "english": "Delicious, tasty",
+            "kana": "おいしい",
+            "time": 1.4534045329890145e+18,
+            "yes": 2
+        },
+        {
+            "english": "busy",
+            "kana": "いそがしい",
+            "kanji": "忙しい",
+            "time": "2016-01-21T21:07:24",
+            "yes": 1
+        },
+        {
+            "english": "enjoyable",
+            "kana": "たのしい",
+            "kanji": "楽しい",
+            "time": "2016-01-21T21:52:57",
+            "yes": 2
+        },
+        {
+            "english": "white",
+            "kana": "しろい",
+            "kanji": "白い",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "black",
+            "kana": "くろい",
+            "kanji": "黒い",
+            "yes": 1
+        },
+        {
+            "english": "red",
+            "kana": "あかい",
+            "kanji": "赤い",
+            "yes": 1
+        },
+        {
+            "english": "blue",
+            "kana": "あおい",
+            "kanji": "青い",
+            "yes": 2
+        },
+        {
+            "english": "Cherry (blossom)",
+            "kana": "さくら",
+            "kanji": "桜",
+            "yes": 3
+        },
+        {
+            "english": "mountain",
+            "kana": "やま",
+            "kanji": "山",
+            "yes": 1
+        },
+        {
+            "english": "Town, city",
+            "kana": "まち",
+            "kanji": "町",
+            "yes": 2
+        },
+        {
+            "english": "food",
+            "kana": "たべもの",
+            "kanji": "食べ物",
+            "time": "2016-01-21T20:48:28",
+            "yes": 1
+        },
+        {
+            "english": "place",
+            "kana": "ところ",
+            "kanji": "所",
+            "no": 3
+        },
+        {
+            "english": "dormitory",
+            "kana": "りょう",
+            "kanji": "寮",
+            "yes": 1
+        },
+        {
+            "english": "restaurant",
+            "kana": "レストラン",
+            "time": "2016-01-21T19:59:38",
+            "yes": 3
+        },
+        {
+            "english": "life",
+            "kana": "せいかつ",
+            "kanji": "生活",
+            "no": 3,
+            "time": "2016-01-21T20:37:09",
+            "yes": 1
+        },
+        {
+            "english": "Work, business",
+            "kana": "［お］しごと",
+            "kanji": "［お］仕事",
+            "yes": 2
+        },
+        {
+            "english": "Do one's job, work",
+            "kana": "しごとをします",
+            "kanji": "仕事をします",
+            "yes": 1
+        },
+        {
+            "english": "how",
+            "kana": "どう",
+            "yes": 1
+        },
+        {
+            "english": "What kind of ~",
+            "kana": "どんな～",
+            "no": 2,
+            "time": "2016-01-22T00:09:47",
+            "yes": 1
+        },
+        {
+            "english": "very",
+            "kana": "とても",
+            "yes": 1
+        },
+        {
+            "english": "Not so (used with negatives)",
+            "kana": "あまり",
+            "time": "2016-01-21T21:40:44",
+            "yes": 2
+        },
+        {
+            "english": "And (used to connect sentences)",
+            "kana": "そして",
+            "yes": 1
+        },
+        {
+            "english": "~, but ~",
+            "kana": "～が、～",
+            "time": "2016-01-21T23:47:08",
+            "yes": 2
+        },
+        {
+            "english": "How are you?",
+            "kana": "おげんきですか。",
+            "kanji": "お元気ですか。",
+            "time": "2016-01-21T23:42:21",
+            "yes": 2
+        },
+        {
+            "english": "Well let me see. (pausing)",
+            "kana": "そうですね。",
+            "time": "2016-01-21T20:21:54",
+            "yes": 2
+        },
+        {
+            "english": "Won't you have another cup of [~]?",
+            "kana": "［～、］もういっぱいいかがですか。",
+            "kanji": "［～、］もう一杯いかがですか。",
+            "no": 2,
+            "time": "2016-01-22T00:04:35",
+            "yes": 1
+        },
+        {
+            "english": "No, thank you.",
+            "kana": "［いいえ、］けっこうです。",
+            "yes": 1
+        },
+        {
+            "english": "It's already ~[, isn't it?]",
+            "kana": "もう～です［ね］。",
+            "no": 1,
+            "time": "2016-01-21T20:20:59",
+            "yes": 1
+        },
+        {
+            "english": "It's time I was going.",
+            "kana": "そろそろしつれいします。",
+            "kanji": "そろそろ失礼します。",
+            "yes": 2
+        },
+        {
+            "english": "Not at all.",
+            "kana": "いいえ。",
+            "yes": 1
+        },
+        {
+            "english": "Please come again.",
+            "kana": "またいらっしゃってください。",
+            "no": 3,
+            "time": "2016-01-21T23:29:43",
+            "yes": 2
+        }
+    ],
+    "Lesson 9": [
+        {
+            "english": "understand",
+            "kana": "わかります"
+        },
+        {
+            "english": "have",
+            "kana": "あります",
+            "no": 1,
+            "time": 702555824,
+            "yes": 3
+        },
+        {
+            "english": "like",
+            "kana": "すき［な］",
+            "kanji": "好き［な］",
+            "yes": 1
+        },
+        {
+            "english": "dislike",
+            "kana": "きらい［な］",
+            "kanji": "嫌い［な］",
+            "time": "2016-01-21T21:39:31",
+            "yes": 2
+        },
+        {
+            "english": "Good at",
+            "kana": "じょうず［な］",
+            "kanji": "上手［な］",
+            "no": 1,
+            "time": "2016-01-21T21:02:44",
+            "yes": 2
+        },
+        {
+            "english": "Poor at",
+            "kana": "へた［な］",
+            "kanji": "下手［な］",
+            "no": 1,
+            "time": "2016-01-21T23:46:17",
+            "yes": 2
+        },
+        {
+            "english": "drinks",
+            "kana": "のみもの",
+            "kanji": "飲み物",
+            "yes": 2
+        },
+        {
+            "english": "Dish (cooked food), cooking",
+            "kana": "りょうり",
+            "kanji": "料理",
+            "yes": 2
+        },
+        {
+            "english": "cook",
+            "kana": "りょうりをします",
+            "kanji": "料理をします",
+            "yes": 2
+        },
+        {
+            "english": "Sport\nPlay sports",
+            "kana": "スポーツ\nスポーツをします"
+        },
+        {
+            "english": "Baseball\nPlay baseball",
+            "kana": "やきゅう\nやきゅうをします",
+            "kanji": "野球\n野球をします",
+            "yes": 1
+        },
+        {
+            "english": "Dance",
+            "kana": "ダンス\nダンスをします",
+            "yes": 2
+        },
+        {
+            "english": "Trip, tour\nTravel, make a trip",
+            "kana": "りょこう\nりょこう［を］します",
+            "kanji": "旅行\n旅行［を］します",
+            "no": 1,
+            "time": "2016-01-21T19:52:22",
+            "yes": 3
+        },
+        {
+            "english": "music",
+            "kana": "おんがく",
+            "kanji": "音楽",
+            "yes": 1
+        },
+        {
+            "english": "song",
+            "kana": "うた",
+            "kanji": "歌",
+            "time": "2016-01-21T22:25:19",
+            "yes": 2
+        },
+        {
+            "english": "Classical music",
+            "kana": "クラシック",
+            "no": 2,
+            "yes": 2
+        },
+        {
+            "english": "jazz",
+            "kana": "ジャズ",
+            "no": 1,
+            "yes": 1
+        },
+        {
+            "english": "concert",
+            "kana": "コンサート",
+            "no": 3,
+            "time": "2016-01-21T23:42:53",
+            "yes": 2
+        },
+        {
+            "english": "karaoke",
+            "kana": "カラオケ",
+            "time": "2016-01-21T23:59:32",
+            "yes": 2
+        },
+        {
+            "english": "Kabuki (traditional Japanese musical drama)",
+            "kana": "かぶき",
+            "kanji": "歌舞伎",
+            "time": "2016-01-21T20:00:55",
+            "yes": 1
+        },
+        {
+            "english": "Picture, drawing",
+            "kana": "え",
+            "kanji": "絵",
+            "yes": 1
+        },
+        {
+            "english": "Letter, character",
+            "kana": "じ",
+            "kanji": "字",
+            "yes": 1
+        },
+        {
+            "english": "Chinese character",
+            "kana": "かんじ",
+            "kanji": "漢字",
+            "yes": 2
+        },
+        {
+            "english": "Hiragana script",
+            "kana": "ひらがな",
+            "kanji": "平仮名",
+            "time": "2016-01-21T23:52:34",
+            "yes": 1
+        },
+        {
+            "english": "Katakana script",
+            "kana": "かたかな",
+            "kanji": "片仮名",
+            "time": "2016-01-22T00:11:11",
+            "yes": 1
+        },
+        {
+            "english": "The Roman alphabet",
+            "kana": "ローマじ",
+            "kanji": "ローマ字",
+            "yes": 2
+        },
+        {
+            "english": "Small change",
+            "kana": "こまかい　おかね",
+            "kanji": "細かい　お金",
+            "no": 3,
+            "time": "2016-01-21T23:33:59"
+        },
+        {
+            "english": "ticket (katakana)",
+            "kana": "チケット",
+            "no": 2,
+            "yes": 2
+        },
+        {
+            "english": "time",
+            "kana": "じかん",
+            "kanji": "時間",
+            "yes": 2
+        },
+        {
+            "english": "Something to do, errand",
+            "kana": "ようじ",
+            "kanji": "用事",
+            "no": 1,
+            "time": "2016-01-21T20:56:54",
+            "yes": 3
+        },
+        {
+            "english": "Appointment, promise",
+            "kana": "やくそく\nやくそく［を］します",
+            "kanji": "約束\n約束［を］します",
+            "time": "2016-01-22T00:14:40",
+            "yes": 3
+        },
+        {
+            "english": "Side job\nWork part-time",
+            "kana": "アルバイト\nアルバイトをします",
+            "time": "2016-01-21T21:13:25",
+            "no": 2,
+            "yes": 4
+        },
+        {
+            "english": "(someone else's) husband",
+            "kana": "ごしゅじん",
+            "kanji": "ご主人",
+            "yes": 2
+        },
+        {
+            "english": "(my) husband",
+            "kana": "おっと／しゅじん",
+            "kanji": "夫／主人",
+            "no": 8,
+            "time": "2016-01-21T23:54:27",
+            "yes": 1
+        },
+        {
+            "english": "(someone else's) wife",
+            "kana": "おくさん",
+            "kanji": "奥さん",
+            "no": 3,
+            "time": "2016-01-21T21:48:51"
+        },
+        {
+            "english": "(my) wife",
+            "kana": "つま／かない",
+            "kanji": "妻／家内",
+            "no": 1,
+            "time": "2016-01-21T20:55:31",
+            "yes": 2
+        },
+        {
+            "english": "child",
+            "kana": "こども",
+            "kanji": "子ども",
+            "no": 2,
+            "time": "2016-01-21T22:00:06",
+            "yes": 2
+        },
+        {
+            "english": "Well, much",
+            "kana": "よく",
+            "time": "2016-01-21T21:58:08",
+            "yes": 3
+        },
+        {
+            "english": "Mostly, roughly",
+            "kana": "だいたい",
+            "yes": 2
+        },
+        {
+            "english": "Many, much",
+            "kana": "たくさん",
+            "no": 1,
+            "time": "2016-01-22T00:01:20",
+            "yes": 1
+        },
+        {
+            "english": "A little, a few",
+            "kana": "すこし",
+            "kanji": "少し",
+            "no": 1,
+            "time": "2016-01-21T20:09:50"
+        },
+        {
+            "english": "Not at all (used with negatives)",
+            "kana": "ぜんぜん",
+            "kanji": "全然",
+            "time": "2016-01-21T23:35:17",
+            "yes": 1
+        },
+        {
+            "english": "Early, quickly, fast",
+            "kana": "はやく",
+            "kanji": "早く、速く",
+            "time": "2016-01-22T00:09:22",
+            "yes": 1
+        },
+        {
+            "english": "Because ~",
+            "kana": "～から",
+            "time": "2016-01-21T22:38:02",
+            "yes": 3
+        },
+        {
+            "english": "why",
+            "kana": "どうして",
+            "yes": 1
+        },
+        {
+            "english": "Please lend (it to me)",
+            "kana": "かしてください。",
+            "kanji": "貸してください。",
+            "no": 1,
+            "time": "2016-01-21T21:42:42"
+        },
+        {
+            "english": "Sure. / Certainly.",
+            "kana": "いいですよ。",
+            "yes": 1
+        },
+        {
+            "english": "I'm sorry [, but], unfortunately",
+            "kana": "ざんねんです［が］",
+            "kanji": "残念です［が］",
+            "no": 2,
+            "time": "2016-01-21T23:41:15",
+            "yes": 1
+        },
+        {
+            "english": "oh",
+            "kana": "ああ",
+            "time": "2016-01-21T20:12:44",
+            "yes": 3
+        },
+        {
+            "english": "Won't you join me(us)?",
+            "kana": "いっしょにいかがですか。",
+            "no": 2,
+            "time": "2016-01-21T22:45:14"
+        },
+        {
+            "english": "[~] is a bit difficult. (a euphemism used when declining an invitation)",
+            "kana": "［～は］ちょっと……。",
+            "no": 1,
+            "time": "2016-01-22T00:07:21",
+            "yes": 1
+        },
+        {
+            "english": "So you can't (come)?",
+            "kana": "だめですか。",
+            "yes": 1
+        },
+        {
+            "english": "Please ask me again some other time.\n(used when refusing an invitation indirectly, considering someone's feelings)",
+            "kana": "またこんどおねがいします。",
+            "kanji": "また今度お願いします。",
+            "no": 1,
+            "time": "2016-01-22T00:13:15",
+            "yes": 1
+        }
+    ],
+    "kanji": [
+        {
+            "english": "The sun, a day",
+            "kanji": "日（ひ）"
+        },
+        {
+            "english": "The 3rd day",
+            "kanji": "３日（みっ・か）",
+            "time": "2016-01-21T20:44:36",
+            "yes": 1
+        },
+        {
+            "english": "Sunday",
+            "kanji": "日曜日（にち・よう・び）",
+            "time": "2016-01-21T20:48:13",
+            "yes": 1
+        },
+        {
+            "english": "Japan",
+            "kanji": "日本（に・ほん／にっ・ぽん）",
+            "yes": 1
+        },
+        {
+            "english": "The moon, a month",
+            "kanji": "月（つき）",
+            "no": 2,
+            "time": "2016-01-21T23:40:09",
+            "yes": 1
+        },
+        {
+            "english": "Monday",
+            "kanji": "月曜日（げつ・よう・び）",
+            "time": "2016-01-22T00:02:34",
+            "yes": 1
+        },
+        {
+            "english": "One month",
+            "kanji": "１（いっ）か月（げつ）",
+            "no": 3,
+            "time": "2016-01-22T00:00:52",
+            "yes": 3
+        },
+        {
+            "english": "January",
+            "kanji": "１月（いち・がつ）",
+            "yes": 1
+        },
+        {
+            "english": "A tree",
+            "kanji": "木（き）",
+            "no": 1,
+            "time": "2016-01-21T21:59:58",
+            "yes": 2
+        },
+        {
+            "english": "Thursday",
+            "kanji": "木曜日（もく・よう・び）",
+            "time": "2016-01-21T21:58:36",
+            "yes": 1
+        },
+        {
+            "english": "A mountain",
+            "kanji": "山（やま）",
+            "time": 852140216,
+            "yes": 1
+        },
+        {
+            "english": "Mt. Fuji",
+            "kanji": "富士山（ふ・じ・さん）",
+            "yes": 2
+        },
+        {
+            "english": "A volcano",
+            "kanji": "火山（か・ざん）"
+        },
+        {
+            "english": "A river",
+            "kanji": "川（かわ）",
+            "no": 1
+        },
+        {
+            "english": "A brook, a stream",
+            "kanji": "小川（お・がわ）"
+        },
+        {
+            "english": "A rice field",
+            "kanji": "田（た）んぼ",
+            "no": 2,
+            "time": "2016-01-21T21:23:47",
+            "yes": 3
+        },
+        {
+            "english": "A rice field (水田)",
+            "kanji": "水田（すい・でん）",
+            "no": 2,
+            "time": "2016-01-21T22:03:35",
+            "yes": 2
+        },
+        {
+            "english": "Man, a person",
+            "kanji": "人（ひと）",
+            "yes": 1
+        },
+        {
+            "english": "One person",
+            "kanji": "１人（ひと・り）"
+        },
+        {
+            "english": "A Japanese",
+            "kanji": "日本人（に・ほん・じん）",
+            "yes": 1
+        },
+        {
+            "english": "Three people",
+            "kanji": "３人（さん・にん）",
+            "time": "2016-01-21T22:00:15",
+            "yes": 2
+        },
+        {
+            "english": "A mouth",
+            "kanji": "口（くち）",
+            "no": 2,
+            "time": "2016-01-21T21:43:51",
+            "yes": 1
+        },
+        {
+            "english": "population",
+            "kanji": "人口（じん・こう）",
+            "yes": 1
+        },
+        {
+            "english": "A car",
+            "kanji": "車（くるま）",
+            "yes": 1
+        },
+        {
+            "english": "A train",
+            "kanji": "電車（でん・しゃ）",
+            "time": "2016-01-21T22:15:34",
+            "yes": 1
+        },
+        {
+            "english": "A gate",
+            "kanji": "門（もん）",
+            "yes": 1
+        },
+        {
+            "english": "A specialty",
+            "kanji": "専門（せん・もん）",
+            "no": 1,
+            "time": "2016-01-21T23:44:41"
+        },
+        {
+            "english": "fire",
+            "kanji": "火（ひ）",
+            "no": 1,
+            "time": "2016-01-22T00:11:46",
+            "yes": 2
+        },
+        {
+            "english": "Tuesday",
+            "kanji": "火曜日（か・よう・び）",
+            "time": -1257076188,
+            "yes": 1
+        },
+        {
+            "english": "A volcano",
+            "kanji": "火山（か・ざん）",
+            "no": 1,
+            "time": "2016-01-21T21:19:16",
+            "yes": 1
+        },
+        {
+            "english": "water",
+            "kanji": "水（みず）",
+            "yes": 1
+        },
+        {
+            "english": "Wednesday",
+            "kanji": "水曜日（すい・よう・び）",
+            "time": "2016-01-21T20:59:35",
+            "yes": 2
+        },
+        {
+            "english": "money",
+            "kanji": "お金（かね）",
+            "yes": 1
+        },
+        {
+            "english": "gold",
+            "kanji": "金（きん）",
+            "yes": 1
+        },
+        {
+            "english": "Friday",
+            "kanji": "金曜日（きん・よう・び）",
+            "time": "2016-01-21T21:39:17",
+            "yes": 2
+        },
+        {
+            "english": "The ground",
+            "kanji": "土（つち）",
+            "no": 4,
+            "time": "2016-01-21T23:36:04"
+        },
+        {
+            "english": "Saturday",
+            "kanji": "土曜日（ど・よう・び）",
+            "time": "2016-01-21T19:55:48",
+            "yes": 1
+        },
+        {
+            "english": "Civil engineering",
+            "kanji": "土木（ど・ぼく）"
+        },
+        {
+            "english": "A child",
+            "kanji": "子（こ）ども",
+            "yes": 3
+        },
+        {
+            "english": "A girl",
+            "kanji": "女（おんな）の子（こ）",
+            "no": 2,
+            "time": "2016-01-21T20:38:40",
+            "yes": 2
+        },
+        {
+            "english": "A girl student",
+            "kanji": "女子学生（じょ・し・がく・せい）",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "A woman",
+            "kanji": "女（おんな）\n女（おんな）の人（ひと）",
+            "no": 2,
+            "time": "2016-01-21T22:52:20",
+            "yes": 3
+        },
+        {
+            "english": "she",
+            "kanji": "彼女（かの・じょ）",
+            "time": "2016-01-21T21:06:49",
+            "yes": 1
+        },
+        {
+            "english": "A student",
+            "kanji": "学生（がく・せい）",
+            "time": "2016-01-21T23:58:30",
+            "yes": 2
+        },
+        {
+            "english": "A university",
+            "kanji": "大学（だい・がく）",
+            "yes": 1
+        },
+        {
+            "english": "A school",
+            "kanji": "学校（がっ・こう）",
+            "yes": 1
+        },
+        {
+            "english": "To live",
+            "kanji": "生（い）きる",
+            "no": 4,
+            "time": "2016-01-21T23:44:54",
+            "yes": 3
+        },
+        {
+            "english": "To be born",
+            "kanji": "生（う）まれる",
+            "no": 3,
+            "time": "2016-01-21T19:52:07"
+        },
+        {
+            "english": "A teacher",
+            "kanji": "先生（せん・せい）",
+            "yes": 1
+        },
+        {
+            "english": "A student",
+            "kanji": "学生（がく・せい）",
+            "time": "2016-01-21T20:37:51",
+            "yes": 1
+        },
+        {
+            "english": "ahead",
+            "kanji": "先（さき）",
+            "no": 3,
+            "time": "2016-01-21T23:57:19"
+        },
+        {
+            "english": "A teacher",
+            "kanji": "先生（せん・せい）",
+            "time": "2016-01-21T23:35:29",
+            "yes": 3
+        },
+        {
+            "english": "Last month",
+            "kanji": "先月（せん・げつ）",
+            "time": 1.4534045269313966e+18,
+            "yes": 1
+        },
+        {
+            "english": "I",
+            "kanji": "私（わたし／わたくし）",
+            "time": "2016-01-21T21:07:32",
+            "yes": 2
+        },
+        {
+            "english": "One (thing)",
+            "kanji": "一（ひと）つ",
+            "yes": 1
+        },
+        {
+            "english": "One (person)",
+            "kanji": "一人（ひと・り）",
+            "yes": 2
+        },
+        {
+            "english": "January",
+            "kanji": "一月（いち・がつ）",
+            "time": "2016-01-21T20:13:18",
+            "yes": 1
+        },
+        {
+            "english": "One year",
+            "kanji": "一年（いち・ねん）"
+        },
+        {
+            "english": "Two (things)",
+            "kanji": "二（ふた）つ",
+            "yes": 1
+        },
+        {
+            "english": "Two (people)",
+            "kanji": "二人（ふた・り）",
+            "time": "2016-01-21T22:54:39",
+            "yes": 1
+        },
+        {
+            "english": "February",
+            "kanji": "二月（に・がつ）",
+            "yes": 1
+        },
+        {
+            "english": "Two years",
+            "kanji": "二年（に・ねん）"
+        },
+        {
+            "english": "Three (things)",
+            "kanji": "三（みっ）つ",
+            "time": "2016-01-21T23:09:18",
+            "yes": 1
+        },
+        {
+            "english": "The 3rd day, three days",
+            "kanji": "三日（みっ・か）",
+            "time": "2016-01-21T20:00:25",
+            "yes": 2
+        },
+        {
+            "english": "March",
+            "kanji": "三月（さん・がつ）",
+            "yes": 1
+        },
+        {
+            "english": "Three years",
+            "kanji": "三年（さん・ねん）",
+            "time": "2016-01-21T22:24:30",
+            "yes": 2
+        },
+        {
+            "english": "Four (things)",
+            "kanji": "四（よっ）つ",
+            "time": "2016-01-21T21:35:39",
+            "yes": 1
+        },
+        {
+            "english": "The 4th day",
+            "kanji": "四日（よっ・か）",
+            "yes": 1
+        },
+        {
+            "english": "Four years",
+            "kanji": "四年（よ・ねん）",
+            "no": 2,
+            "time": "2016-01-21T20:50:23",
+            "yes": 1
+        },
+        {
+            "english": "April",
+            "kanji": "四月（し・がつ）",
+            "time": "2016-01-21T20:10:03",
+            "yes": 1
+        },
+        {
+            "english": "Five (things)",
+            "kanji": "五（いつ）つ",
+            "yes": 1
+        },
+        {
+            "english": "The 5th day",
+            "kanji": "五日（いつ・か）",
+            "yes": 3
+        },
+        {
+            "english": "May",
+            "kanji": "五月（ご・がつ）",
+            "yes": 2
+        },
+        {
+            "english": "Five years",
+            "kanji": "五年（ご・ねん）",
+            "yes": 1
+        },
+        {
+            "english": "Six (things)",
+            "kanji": "六（むっ）つ"
+        },
+        {
+            "english": "The 6th day",
+            "kanji": "＊六日（むい・か）",
+            "time": "2016-01-21T19:55:26",
+            "yes": 2
+        },
+        {
+            "english": "June",
+            "kanji": "六月（ろく・がつ）",
+            "yes": 2
+        },
+        {
+            "english": "Six years",
+            "kanji": "六年（ろく・ねん）",
+            "yes": 1
+        },
+        {
+            "english": "Seven (things)",
+            "kanji": "七（なな）つ",
+            "yes": 1
+        },
+        {
+            "english": "The 7th day",
+            "kanji": "＊七日（なの・か）",
+            "yes": 1
+        },
+        {
+            "english": "July",
+            "kanji": "七月（しち・がつ）",
+            "time": "2016-01-21T21:34:51",
+            "yes": 1
+        },
+        {
+            "english": "Seven years",
+            "kanji": "七年（しち・ねん）",
+            "time": "2016-01-21T20:12:31",
+            "yes": 2
+        },
+        {
+            "english": "Eight (things)",
+            "kanji": "八（やっ）つ",
+            "no": 2,
+            "time": "2016-01-21T23:31:42",
+            "yes": 3
+        },
+        {
+            "english": "The 8th day",
+            "kanji": "＊八日（よう・か）",
+            "yes": 2
+        },
+        {
+            "english": "August",
+            "kanji": "八月（はち・がつ）",
+            "time": "2016-01-21T23:55:02",
+            "yes": 1
+        },
+        {
+            "english": "Eight years",
+            "kanji": "八年（はち・ねん）"
+        },
+        {
+            "english": "Nine (things)",
+            "kanji": "九（ここの）つ",
+            "yes": 1
+        },
+        {
+            "english": "The 9th day",
+            "kanji": "九日（ここの・か）",
+            "time": "2016-01-21T20:50:13",
+            "yes": 2
+        },
+        {
+            "english": "September",
+            "kanji": "九月（く・がつ）",
+            "no": 1,
+            "yes": 2
+        },
+        {
+            "english": "900",
+            "kanji": "九百（きゅう・ひゃく）",
+            "time": "2016-01-21T23:53:11",
+            "yes": 1
+        },
+        {
+            "english": "Ten (things)",
+            "kanji": "十（とお）",
+            "no": 1,
+            "time": "2016-01-21T21:00:22"
+        },
+        {
+            "english": "The 10th day",
+            "kanji": "十日（とお・か）",
+            "time": "2016-01-22T00:10:49",
+            "yes": 3
+        },
+        {
+            "english": "October",
+            "kanji": "十月（じゅう・がつ）",
+            "no": 2
+        },
+        {
+            "english": "10 years",
+            "kanji": "十年（じゅう・ねん）",
+            "time": "2016-01-21T20:11:48",
+            "yes": 1
+        },
+        {
+            "english": "200",
+            "kanji": "二百（に・ひゃく）",
+            "yes": 1
+        },
+        {
+            "english": "300",
+            "kanji": "三百（さん・びゃく）",
+            "no": 1
+        },
+        {
+            "english": "600",
+            "kanji": "六百（ろっ・ぴゃく）",
+            "yes": 2
+        },
+        {
+            "english": "800",
+            "kanji": "八百（はっ・ぴゃく）",
+            "no": 4,
+            "time": "2016-01-21T23:28:11",
+            "yes": 2
+        },
+        {
+            "english": "A thousand yen",
+            "kanji": "千円（せん・えん）",
+            "yes": 1
+        },
+        {
+            "english": "3,000",
+            "kanji": "三千（さん・ぜん）",
+            "no": 1,
+            "time": "2016-01-22T00:01:59",
+            "yes": 1
+        },
+        {
+            "english": "Ten thousand yen",
+            "kanji": "一万円（いち・まん・えん）",
+            "yes": 1
+        },
+        {
+            "english": "One million people",
+            "kanji": "百万人（ひゃく・まん・にん）",
+            "no": 1,
+            "time": "2016-01-21T22:39:08",
+            "yes": 3
+        },
+        {
+            "english": "A circle, yen",
+            "kanji": "円（えん）",
+            "yes": 1
+        },
+        {
+            "english": "5,000 yen",
+            "kanji": "五千円（ご・せん・えん）",
+            "no": 1,
+            "time": "2016-01-21T23:57:04",
+            "yes": 2
+        },
+        {
+            "english": "100 yen",
+            "kanji": "百円（ひゃく・えん）",
+            "yes": 1
+        },
+        {
+            "english": "A year, an age",
+            "kanji": "年（とし）",
+            "no": 2,
+            "time": "2016-01-22T00:01:31"
+        },
+        {
+            "english": "elder",
+            "kanji": "年上（とし・うえ）",
+            "no": 3,
+            "time": "2016-01-21T23:58:45"
+        },
+        {
+            "english": "Last year",
+            "kanji": "去年（きょ・ねん）",
+            "no": 2,
+            "time": "2016-01-21T20:11:27"
+        },
+        {
+            "english": "Next year",
+            "kanji": "来年（らい・ねん）",
+            "time": "2016-01-21T20:21:24",
+            "yes": 2
+        },
+        {
+            "english": "Above, on",
+            "kanji": "上（うえ）"
+        },
+        {
+            "english": "To go up, to rise",
+            "kanji": "上（あ）がる",
+            "no": 3,
+            "time": "2016-01-22T00:08:40"
+        },
+        {
+            "english": "To go up",
+            "kanji": "上（のぼ）る",
+            "no": 4,
+            "time": "2016-01-21T20:47:11"
+        },
+        {
+            "english": "skillful",
+            "kanji": "上手（じょう・ず）な",
+            "no": 1,
+            "yes": 3
+        },
+        {
+            "english": "under",
+            "kanji": "下（した）",
+            "no": 7,
+            "time": "2016-01-22T00:05:13"
+        },
+        {
+            "english": "To go down",
+            "kanji": "下（さ）がる",
+            "no": 3,
+            "time": "2016-01-22T00:08:07"
+        },
+        {
+            "english": "Under ground",
+            "kanji": "地下（ち・か）",
+            "yes": 1
+        },
+        {
+            "english": "To get off",
+            "kanji": "下車（げ・しゃ）する",
+            "no": 2
+        },
+        {
+            "english": "inside",
+            "kanji": "中（なか）",
+            "no": 5,
+            "time": "2016-01-21T23:39:15"
+        },
+        {
+            "english": "All day long",
+            "kanji": "一日中（いち・にち・じゅう）",
+            "no": 1,
+            "time": "2016-01-21T23:27:41",
+            "yes": 1
+        },
+        {
+            "english": "A junior high school",
+            "kanji": "中学（ちゅう・がく）\n中学校（ちゅう・がっ・こう）",
+            "no": 2,
+            "time": "2016-01-22T00:10:38",
+            "yes": 1
+        },
+        {
+            "english": "big",
+            "kanji": "大（おお）きい\n大（おお）きな",
+            "yes": 2
+        },
+        {
+            "english": "An adult",
+            "kanji": "＊大人（おとな）",
+            "no": 4,
+            "time": "2016-01-22T00:01:07",
+            "yes": 1
+        },
+        {
+            "english": "A university",
+            "kanji": "大学（だい・がく）",
+            "time": "2016-01-21T21:59:37",
+            "yes": 3
+        },
+        {
+            "english": "small",
+            "kanji": "小（ちい）さい\n小（ちい）さな",
+            "yes": 1
+        },
+        {
+            "english": "A brook, a stream",
+            "kanji": "小川（お・がわ）",
+            "no": 2,
+            "time": "2016-01-22T00:08:21",
+            "yes": 1
+        },
+        {
+            "english": "A primary school",
+            "kanji": "小学校（しょう・がっ・こう）",
+            "no": 3,
+            "time": "2016-01-21T23:47:39"
+        },
+        {
+            "english": "A book",
+            "kanji": "本（ほん）",
+            "yes": 1
+        },
+        {
+            "english": "This day",
+            "kanji": "本日（ほん・じつ）",
+            "no": 4,
+            "time": "2016-01-21T21:25:13",
+            "yes": 1
+        },
+        {
+            "english": "Half a year",
+            "kanji": "半年（はん・とし）",
+            "no": 3,
+            "time": "2016-01-21T23:35:47",
+            "yes": 2
+        },
+        {
+            "english": "Half a day",
+            "kanji": "半日（はん・にち）",
+            "time": "2016-01-21T20:14:03",
+            "yes": 1
+        },
+        {
+            "english": "half",
+            "kanji": "半分（はん・ぶん）",
+            "no": 1,
+            "time": "2016-01-21T20:18:31",
+            "yes": 2
+        },
+        {
+            "english": "03:30",
+            "kanji": "三時半（さん・じ・はん）",
+            "time": "2016-01-21T23:06:22",
+            "yes": 2
+        },
+        {
+            "english": "To divide",
+            "kanji": "分（わ）ける",
+            "no": 4,
+            "time": "2016-01-21T23:43:51"
+        },
+        {
+            "english": "To understand",
+            "kanji": "分（わ）かる",
+            "time": "2016-01-21T23:59:46",
+            "yes": 2
+        },
+        {
+            "english": "Five minutes",
+            "kanji": "五分（ご・ふん）",
+            "yes": 1
+        },
+        {
+            "english": "Six minutes",
+            "kanji": "六分（ろっ・ぷん）",
+            "no": 2,
+            "time": "2016-01-22T00:11:31",
+            "yes": 2
+        },
+        {
+            "english": "power",
+            "kanji": "力（ちから）",
+            "no": 4,
+            "time": "2016-01-21T23:27:11"
+        },
+        {
+            "english": "dynamics",
+            "kanji": "力学（りき・がく）",
+            "no": 2,
+            "time": "2016-01-21T23:45:20",
+            "yes": 2
+        },
+        {
+            "english": "Water power",
+            "kanji": "水力（すい・りょく）",
+            "no": 1,
+            "time": "2016-01-21T23:51:31",
+            "yes": 1
+        },
+        {
+            "english": "Heat power",
+            "kanji": "火力（か・りょく）",
+            "no": 1,
+            "yes": 1
+        },
+        {
+            "english": "what",
+            "kanji": "何（なに）",
+            "time": "2016-01-21T22:55:03",
+            "yes": 1
+        },
+        {
+            "english": "What is it?",
+            "kanji": "何（なん）ですか。",
+            "time": "2016-01-21T21:39:56",
+            "yes": 2
+        },
+        {
+            "english": "How many people",
+            "kanji": "何人（なん・にん）",
+            "no": 2,
+            "time": "2016-01-21T23:31:07",
+            "yes": 1
+        },
+        {
+            "english": "What year",
+            "kanji": "何年（なん・ねん）",
+            "yes": 1
+        }
+    ]
+}
