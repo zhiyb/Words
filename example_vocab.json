@@ -1,7 +1,7 @@
 {
     "Japanese JAPA9018": {
         "info": {
-            "time": "2016-03-06T15:50:41",
+            "time": "2016-03-06T16:05:43",
             "type": {
                 "no": "int",
                 "skip": "int",
@@ -20,8 +20,8 @@
                 {
                     "english": "I",
                     "kana": "わたし",
-                    "time": "2016-03-06T07:27:18",
-                    "yes": 5
+                    "time": "2016-03-06T15:56:23",
+                    "yes": 6
                 },
                 {
                     "english": "you",
@@ -45,8 +45,8 @@
                 {
                     "english": "Suffix offed added to a child's name",
                     "kana": "～ちゃん",
-                    "time": "2016-01-22T02:09:23",
-                    "yes": 3
+                    "time": "2016-03-06T16:04:55",
+                    "yes": 4
                 },
                 {
                     "english": "Suffix meaning 'a national of'",
@@ -433,8 +433,8 @@
                 {
                     "english": "That way, that place near the listener",
                     "kana": "そちら",
-                    "time": "2016-01-22T03:45:01",
-                    "yes": 2
+                    "time": "2016-03-06T15:54:02",
+                    "yes": 3
                 },
                 {
                     "english": "That way, that place over there",
@@ -563,8 +563,8 @@
                     "english": "shoes",
                     "kana": "くつ",
                     "kanji": "靴",
-                    "no": 1,
-                    "time": "2016-01-22T03:30:42",
+                    "no": 2,
+                    "time": "2016-03-06T15:53:54",
                     "yes": 4
                 },
                 {
@@ -895,7 +895,8 @@
                     "english": "Every night",
                     "kana": "まいばん",
                     "kanji": "毎晩",
-                    "time": "2016-01-22T00:59:29",
+                    "skip": 1,
+                    "time": "2016-03-06T15:54:13",
                     "yes": 2
                 },
                 {
@@ -1010,8 +1011,8 @@
                     "kana": "かいぎをします",
                     "kanji": "会議をします",
                     "no": 1,
-                    "time": "2016-01-22T03:17:47",
-                    "yes": 3
+                    "time": "2016-03-06T16:04:21",
+                    "yes": 4
                 }
             ],
             "Lesson 5": [
@@ -1522,8 +1523,8 @@
                     "english": "lunch",
                     "kana": "ひるごはん",
                     "kanji": "昼ごはん",
-                    "time": "2016-01-22T02:22:35",
-                    "yes": 3
+                    "time": "2016-03-06T15:56:39",
+                    "yes": 4
                 },
                 {
                     "english": "supper",
@@ -1808,7 +1809,8 @@
                     "english": "borrow",
                     "kana": "かります",
                     "kanji": "借ります",
-                    "time": "2016-01-22T03:15:27",
+                    "no": 1,
+                    "time": "2016-03-06T15:56:01",
                     "yes": 3
                 },
                 {
@@ -1869,7 +1871,8 @@
                 {
                     "english": "scissors",
                     "kana": "はさみ",
-                    "time": "2016-01-22T02:37:36",
+                    "no": 1,
+                    "time": "2016-03-06T15:57:15",
                     "yes": 3
                 },
                 {
@@ -1903,8 +1906,8 @@
                 {
                     "english": "punch",
                     "kana": "パンチ",
-                    "time": "2016-03-06T14:18:13",
-                    "yes": 3
+                    "time": "2016-03-06T15:57:28",
+                    "yes": 4
                 },
                 {
                     "english": "stapler",
@@ -2397,8 +2400,8 @@
                     "english": "How are you?",
                     "kana": "おげんきですか。",
                     "kanji": "お元気ですか。",
-                    "time": "2016-01-22T00:38:38",
-                    "yes": 3
+                    "time": "2016-03-06T16:05:43",
+                    "yes": 4
                 },
                 {
                     "english": "Well let me see. (pausing)",
@@ -3062,8 +3065,8 @@
                 {
                     "english": "she",
                     "kanji": "彼女（かの・じょ）",
-                    "time": "2016-01-22T02:40:47",
-                    "yes": 2
+                    "time": "2016-03-06T15:55:47",
+                    "yes": 3
                 },
                 {
                     "english": "A student",
@@ -3113,7 +3116,8 @@
                 {
                     "english": "Last month",
                     "kanji": "先月（せん・げつ）",
-                    "time": "2016-01-22T02:30:14",
+                    "no": 1,
+                    "time": "2016-03-06T15:55:34",
                     "yes": 2
                 },
                 {
@@ -3156,8 +3160,8 @@
                 {
                     "english": "February",
                     "kanji": "二月（に・がつ）",
-                    "time": "2016-01-22T03:59:34",
-                    "yes": 2
+                    "time": "2016-03-06T16:04:49",
+                    "yes": 3
                 },
                 {
                     "english": "Two years",
@@ -3680,8 +3684,8 @@
                 {
                     "english": "How many people",
                     "kanji": "何人（なん・にん）",
-                    "no": 2,
-                    "time": "2016-01-22T02:47:43",
+                    "no": 3,
+                    "time": "2016-03-06T15:56:16",
                     "yes": 4
                 },
                 {

@@ -49,7 +49,7 @@ Info Info::fromJsonObject(const QJsonObject &object)
 		info.types[it.key()] = QMetaType::type(it.value().toString().toLocal8Bit());
 
 	if (object.contains("time"))
-		info.lastTime = QDateTime::fromString(object.value("time").toString());
+		info.lastTime = QDateTime::fromString(object.value("time").toString(), Qt::ISODate);
 	else
 		info.lastTime = QDateTime::currentDateTime();
 

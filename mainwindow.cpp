@@ -139,6 +139,7 @@ found:
 	lKanji->setText(word["kanji"].toString());
 	lEnglish->setText(word["english"].toString());
 	pbLevel[0]->setText(tr("Yes/%1 (&Z)").arg(word["yes"].toInt()));
+	pbLevel[1]->setText(tr("Skip/%1 (&X)").arg(word["skip"].toInt()));
 	pbLevel[2]->setText(tr("No/%1 (&C)").arg(word["no"].toInt()));
 	leInput->clear();
 	drawing->clear();
