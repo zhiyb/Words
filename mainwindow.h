@@ -26,7 +26,6 @@ private slots:
 private:
 	void wordParamInc(QString key, int inc);
 	QJsonDocument toJsonDocument();
-	void debugProb() const;
 
 	QLabel *lLesson, *lKana, *lKanji, *lEnglish;
 	QLineEdit *leInput;
@@ -35,13 +34,10 @@ private:
 	Drawing *drawing;
 
 	QFile docFile;
-	Info info;
-	QVector<Unit> units;
+	Group group;
+	//QVector<Group> groups;
 
-	std::vector<float> probabilities;
 	std::discrete_distribution<int> distribution;
-	int wordCount;
-
 	std::default_random_engine *generator;
 
 	struct status_t {

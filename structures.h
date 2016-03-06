@@ -17,13 +17,14 @@ struct Info
 
 	Weight weights;
 	Type types;
+	QDateTime lastTime;
 };
 
 struct Word
 {
 	Word() {}
-	Word(const QJsonObject &obj);
-	double weight(const Info &i) const;
+	Word(const QJsonObject &obj) : fields(obj.toVariantHash()) {}
+	double weight(const Info &info) const;
 	QVariant &operator[](const QString key) {return fields[key];}
 	const QVariant operator[](const QString key) const {return fields.value(key);}
 	const QJsonValue toJsonValue(const QString &key, const Info &i) const;
@@ -38,6 +39,20 @@ struct Unit
 	QString name;
 	QVector<Word> words;
 	Weight weightList;
+};
+
+struct Group
+{
+	Group() : wordCount(0) {}
+	Group(const QString &name, const QJsonObject &object);
+	const QJsonObject toJsonObject() const;
+	void debugProb() const;
+
+	QString name;
+	Info info;
+	QVector<Unit> units;
+	QVector<float> probabilities;
+	unsigned int wordCount;
 };
 
 #endif // STRUCTURES_H

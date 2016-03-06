@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
 	unsigned seed = system_clock::now().time_since_epoch().count();
 	generator = new std::default_random_engine(seed);
-	wordCount = 0;
 	QFont f(font());
 	f.setPointSize(FONT_NORMAL);
 	f.setFamily("Calibri");
@@ -77,7 +76,7 @@ void MainWindow::openFile()
 		return;
 	QFile f(file);
 	if (!f.open(QFile::ReadWrite)) {
-		QMessageBox::warning(this, tr("Error open file"), tr("Cannot open file for read"));
+		QMessageBox::warning(this, tr("Error open file"), tr("Cannot open file for read & write"));
 		return;
 	}
 	QJsonParseError error;
@@ -91,39 +90,17 @@ void MainWindow::openFile()
 		return;
 	}
 
-	int count = 0;
-	QVector<Unit> units;
-	std::vector<float> probabilities;
-	QJsonObject object(json.object());
-
-	Info info = Info::fromJsonObject(object.value("info").toObject());
-
-	QJsonObject payload = object.value("payload").toObject();
-	for (QJsonObject::const_iterator it = payload.begin(); it != payload.end(); it++) {
-		Unit unit;
-		unit.name = it.key();
-		QJsonArray array(it.value().toArray());
-
-		foreach (QJsonValue val, array) {
-			Word w(val.toObject());
-			unit.words.append(w);
-			probabilities.push_back(w.weight(info));
-		}
-
-		units.append(unit);
-		count += unit.words.count();
-	}
-	if (!count) {
+	QString key(json.object().keys().first());
+	QJsonObject object(json.object().value(key).toObject());
+	Group group(key, object);
+	if (!group.wordCount) {
 		QMessageBox::warning(this, tr("Error load data"), tr("Did not find any words"));
 		return;
 	}
 
-	this->info = info;
-	this->units = units;
-	this->probabilities = probabilities;
-	wordCount = count;
-	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
-	//debugProb();
+	this->group = group;
+	distribution = std::discrete_distribution<int>(group.probabilities.begin(), group.probabilities.end());
+	//group.debugProb();
 
 	f.close();
 	if (docFile.isOpen())
@@ -131,7 +108,7 @@ void MainWindow::openFile()
 	docFile.setFileName(file);
 	if (!docFile.open(QFile::ReadWrite)) {
 		QMessageBox::warning(this, tr("Error open file"), tr("Cannot open file for write"));
-		wordCount = 0;
+		group = Group();
 		return;
 	}
 
@@ -140,20 +117,20 @@ void MainWindow::openFile()
 
 void MainWindow::newWord()
 {
-	if (!wordCount)
+	if (!group.wordCount)
 		return;
 
 	int n = status.index = distribution(*generator);
 	int u;
-	for (u = 0; u < units.count(); u++) {
-		if (n < units.at(u).words.count())
+	for (u = 0; u < group.units.count(); u++) {
+		if (n < group.units.at(u).words.count())
 			goto found;
-		n -= units.at(u).words.count();
+		n -= group.units.at(u).words.count();
 	}
 	return;
 
 found:
-	const Unit &unit = units.at(u);
+	const Unit &unit = group.units.at(u);
 	const Word &word = unit.words.at(n);
 	lKana->setVisible(false);
 	lKanji->setVisible(false);
@@ -194,31 +171,33 @@ void MainWindow::keyboardMode()
 
 void MainWindow::wordParamInc(QString key, int inc)
 {
-	if (!wordCount)
+	if (!group.wordCount)
 		return;
 
 	int n = status.index;
 	int u;
-	for (u = 0; u < units.count(); u++) {
-		if (n < units.at(u).words.count())
+	for (u = 0; u < group.units.count(); u++) {
+		if (n < group.units.at(u).words.count())
 			goto found;
-		n -= units.at(u).words.count();
+		n -= group.units.at(u).words.count();
 	}
 	return;
 
 found:
 	//const Unit &unit = units.at(u);
-	Word &word = units[u].words[n];
+	Word &word = group.units[u].words[n];
 
+	group.info.lastTime = QDateTime::currentDateTime();
 	word[key] = word[key].toInt() + inc;
-	word["time"] = QDateTime::currentDateTime().toString(Qt::ISODate);
-
-	probabilities[status.index] = word.weight(info);
-	//debugProb();
+	word["time"] = group.info.lastTime.toString(Qt::ISODate);
 
 	newWord();
-	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
+	group.probabilities[status.index] = word.weight(group.info);
+	distribution = std::discrete_distribution<int>(group.probabilities.begin(), group.probabilities.end());
+	//debugProb();
 
+	if (!docFile.isOpen())
+		return;
 	QByteArray json = toJsonDocument().toJson();
 	docFile.seek(0);
 	docFile.write(json);
@@ -229,21 +208,6 @@ found:
 QJsonDocument MainWindow::toJsonDocument()
 {
 	QJsonObject root;
-
-	root.insert("info", info.toJsonObject());
-
-	QJsonObject payload;
-	foreach (const Unit &unit, units)
-		payload.insert(unit.name, unit.toJsonArray());
-	root.insert("payload", payload);
-
+	root.insert(group.name, group.toJsonObject());
 	return QJsonDocument(root);
-}
-
-void MainWindow::debugProb() const
-{
-	QMap<float, int> map;
-	for (float p:probabilities)
-		map[p] += 1;
-	qDebug() << "Probabilities:" << map;
 }

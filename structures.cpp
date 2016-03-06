@@ -17,30 +17,6 @@ static const struct {
 	{"time", -0.001f, QMetaType::QDateTime},
 }, *ptr = defaults;
 
-Word::Word(const QJsonObject &obj)
-{
-	fields = obj.toVariantHash();
-}
-
-double Word::weight(const Info &i) const
-{
-	double w = 0.f;
-	for (QVariantHash::const_iterator it = fields.constBegin(); it != fields.constEnd(); it++) {
-		switch (i.types[it.key()]) {
-		case QMetaType::Int:
-		case QMetaType::Double:
-			w += it.value().toDouble() * i.weights[it.key()];
-			break;
-		case QMetaType::QDateTime:
-			QVariant v = it.value();
-			w += (double)QDateTime::currentDateTime().secsTo(v.toDateTime()) * \
-					i.weights[it.key()];
-			break;
-		}
-	}
-	return w;
-}
-
 QJsonObject Info::toJsonObject() const
 {
 	QJsonObject object;
@@ -54,6 +30,8 @@ QJsonObject Info::toJsonObject() const
 	for (Type::const_iterator it = types.constBegin(); it != types.constEnd(); it++)
 		type.insert(it.key(), QMetaType::typeName(it.value()));
 	object.insert("type", type);
+
+	object.insert("time", lastTime.toString(Qt::ISODate));
 
 	return object;
 }
@@ -70,6 +48,11 @@ Info Info::fromJsonObject(const QJsonObject &object)
 	for (QJsonObject::const_iterator it = type.begin(); it != type.end(); it++)
 		info.types[it.key()] = QMetaType::type(it.value().toString().toLocal8Bit());
 
+	if (object.contains("time"))
+		info.lastTime = QDateTime::fromString(object.value("time").toString());
+	else
+		info.lastTime = QDateTime::currentDateTime();
+
 	for (unsigned int i = 0; i != sizeof(defaults) / sizeof(*ptr); i++, ptr++) {
 		if (!info.weights.contains(ptr->name))
 			info.weights[ptr->name] = ptr->weight;
@@ -77,6 +60,25 @@ Info Info::fromJsonObject(const QJsonObject &object)
 	}
 
 	return info;
+}
+
+double Word::weight(const Info &info) const
+{
+	double w = 0.f;
+	for (QVariantHash::const_iterator it = fields.constBegin(); it != fields.constEnd(); it++) {
+		switch (info.types[it.key()]) {
+		case QMetaType::Int:
+		case QMetaType::Double:
+			w += it.value().toDouble() * info.weights[it.key()];
+			break;
+		case QMetaType::QDateTime:
+			QVariant v = it.value();
+			w += (double)info.lastTime.secsTo(v.toDateTime()) * \
+					info.weights[it.key()];
+			break;
+		}
+	}
+	return w;
 }
 
 const QJsonValue Word::toJsonValue(const QString &key, const Info &i) const
@@ -96,4 +98,50 @@ QJsonArray Unit::toJsonArray() const
 	foreach (const Word &word, words)
 		array.append(QJsonObject::fromVariantHash(word.fields));
 	return array;
+}
+
+Group::Group(const QString &name, const QJsonObject &object)
+{
+	this->name = name;
+	info = Info::fromJsonObject(object.value("info").toObject());
+
+	int count = 0;
+	QJsonObject payload = object.value("payload").toObject();
+	for (QJsonObject::const_iterator it = payload.begin(); it != payload.end(); it++) {
+		Unit unit;
+		unit.name = it.key();
+		QJsonArray array(it.value().toArray());
+
+		foreach (QJsonValue val, array) {
+			Word w(val.toObject());
+			unit.words.append(w);
+			probabilities.append(w.weight(info));
+		}
+
+		units.append(unit);
+		count += unit.words.count();
+	}
+
+	wordCount = count;
+}
+
+const QJsonObject Group::toJsonObject() const
+{
+	QJsonObject object;
+	object.insert("info", info.toJsonObject());
+
+	QJsonObject payload;
+	foreach (const Unit &unit, units)
+		payload.insert(unit.name, unit.toJsonArray());
+	object.insert("payload", payload);
+
+	return object;
+}
+
+void Group::debugProb() const
+{
+	QMap<float, int> map;
+	for (float p:probabilities)
+		map[p] += 1;
+	qDebug() << "Probabilities:" << map;
 }
