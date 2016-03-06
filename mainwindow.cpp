@@ -123,7 +123,7 @@ void MainWindow::openFile()
 	this->probabilities = probabilities;
 	wordCount = count;
 	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
-	debugProb();
+	//debugProb();
 
 	f.close();
 	if (docFile.isOpen())

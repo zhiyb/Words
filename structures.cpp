@@ -6,6 +6,17 @@
 #include <QDebug>
 #include "structures.h"
 
+static const struct {
+	const char *name;
+	const float weight;
+	const int type;
+} defaults[] = {
+	{"yes", -0.75f, QMetaType::Int},
+	{"no", 1.f, QMetaType::Int},
+	{"skip", 0.2f, QMetaType::Int},
+	{"time", -0.001f, QMetaType::QDateTime},
+}, *ptr = defaults;
+
 Word::Word(const QJsonObject &obj)
 {
 	fields = obj.toVariantHash();
@@ -22,7 +33,8 @@ double Word::weight(const Info &i) const
 			break;
 		case QMetaType::QDateTime:
 			QVariant v = it.value();
-			w += (double)v.toDateTime().secsTo(QDateTime::currentDateTime()) * i.weights[it.key()];
+			w += (double)QDateTime::currentDateTime().secsTo(v.toDateTime()) * \
+					i.weights[it.key()];
 			break;
 		}
 	}
@@ -58,16 +70,6 @@ Info Info::fromJsonObject(const QJsonObject &object)
 	for (QJsonObject::const_iterator it = type.begin(); it != type.end(); it++)
 		info.types[it.key()] = QMetaType::type(it.value().toString().toLocal8Bit());
 
-	static const struct {
-		const char *name;
-		const float weight;
-		const int type;
-	} defaults[] = {
-		{"yes", -0.75f, QMetaType::Int},
-		{"no", 1.f, QMetaType::Int},
-		{"skip", 0.1f, QMetaType::Int},
-		{"time", -0.001f, QMetaType::QDateTime},
-	}, *ptr = defaults;
 	for (unsigned int i = 0; i != sizeof(defaults) / sizeof(*ptr); i++, ptr++) {
 		if (!info.weights.contains(ptr->name))
 			info.weights[ptr->name] = ptr->weight;
