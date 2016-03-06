@@ -54,7 +54,6 @@ MainWindow::MainWindow(QWidget *parent)
 	//lay->addLayout(hlay = new QHBoxLayout);
 	hlay->addWidget(pbOpen = new QPushButton(tr("&Open")));
 	//hlay->addWidget(pbSave = new QPushButton(tr("S&ave")));
-	//hlay->addWidget(pbNext = new QPushButton(tr("&Next")));
 
 	hlay->addWidget(pbClear = new QPushButton(tr("Clea&r")));
 	lay->addWidget(drawing = new Drawing(this));
@@ -62,10 +61,9 @@ MainWindow::MainWindow(QWidget *parent)
 	drawing->setColour(Qt::black);
 
 	connect(pbOpen, SIGNAL(clicked(bool)), this, SLOT(openFile()));
-	//connect(pbNext, SIGNAL(clicked(bool)), this, SLOT(newWord()));
 	connect(pbShow, SIGNAL(clicked(bool)), this, SLOT(showWord()));
 	connect(pbLevel[0], SIGNAL(clicked(bool)), this, SLOT(wordYes()));
-	connect(pbLevel[1], SIGNAL(clicked(bool)), this, SLOT(newWord()));
+	connect(pbLevel[1], SIGNAL(clicked(bool)), this, SLOT(wordSkip()));
 	connect(pbLevel[2], SIGNAL(clicked(bool)), this, SLOT(wordNo()));
 	connect(pbClear, SIGNAL(clicked(bool)), drawing, SLOT(clear()));
 	connect(drawing, SIGNAL(active()), this, SLOT(drawingMode()));
@@ -75,6 +73,8 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::openFile()
 {
 	QString file = QFileDialog::getOpenFileName(this, QString(), QString(), tr("Json document (*.json)"));
+	if (file.isEmpty())
+		return;
 	QFile f(file);
 	if (!f.open(QFile::ReadWrite)) {
 		QMessageBox::warning(this, tr("Error open file"), tr("Cannot open file for read"));
@@ -92,28 +92,35 @@ void MainWindow::openFile()
 	}
 
 	int count = 0;
-	QVector<lesson_t> lessons_new;
-	std::vector<float> probabilities_new;
-	QJsonObject obj(json.object());
-	for (QJsonObject::Iterator it = obj.begin(); it != obj.end(); it++) {
-		struct lesson_t lesson;
-		lesson.name = it.key();
-		QJsonArray array(it.value().toArray());
-		lesson.count = array.count();
-		lessons_new.append(lesson);
-		count += lesson.count;
+	QVector<Unit> units;
+	std::vector<float> probabilities;
+	QJsonObject object(json.object());
 
-		foreach (QJsonValue val, array)
-			probabilities_new.push_back(probability(val.toObject()));
+	Info info = Info::fromJsonObject(object.value("info").toObject());
+
+	QJsonObject payload = object.value("payload").toObject();
+	for (QJsonObject::const_iterator it = payload.begin(); it != payload.end(); it++) {
+		Unit unit;
+		unit.name = it.key();
+		QJsonArray array(it.value().toArray());
+
+		foreach (QJsonValue val, array) {
+			Word w(val.toObject());
+			unit.words.append(w);
+			probabilities.push_back(w.weight(info));
+		}
+
+		units.append(unit);
+		count += unit.words.count();
 	}
 	if (!count) {
 		QMessageBox::warning(this, tr("Error load data"), tr("Did not find any words"));
 		return;
 	}
 
-	root = obj;
-	lessons = lessons_new;
-	probabilities = probabilities_new;
+	this->info = info;
+	this->units = units;
+	this->probabilities = probabilities;
 	wordCount = count;
 	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
 	debugProb();
@@ -137,22 +144,23 @@ void MainWindow::newWord()
 		return;
 
 	int n = status.index = distribution(*generator);
-	int lesson = 0;
-	foreach (lesson_t l, lessons) {
-		if (n < l.count)
-			break;
-		n -= l.count;
-		lesson++;
+	int u;
+	for (u = 0; u < units.count(); u++) {
+		if (n < units.at(u).words.count())
+			goto found;
+		n -= units.at(u).words.count();
 	}
+	return;
 
-	QString lKey = root.keys().at(lesson);
-	QJsonObject word(root.value(lKey).toArray().at(n).toObject());
+found:
+	const Unit &unit = units.at(u);
+	const Word &word = unit.words.at(n);
 	lKana->setVisible(false);
 	lKanji->setVisible(false);
-	lLesson->setText(lKey);
-	lKana->setText(word.value("kana").toString());
-	lKanji->setText(word.value("kanji").toString());
-	lEnglish->setText(word.value("english").toString());
+	lLesson->setText(unit.name);
+	lKana->setText(word["kana"].toString());
+	lKanji->setText(word["kanji"].toString());
+	lEnglish->setText(word["english"].toString());
 	pbLevel[0]->setText(tr("Yes/%1 (&Z)").arg(word["yes"].toInt()));
 	pbLevel[2]->setText(tr("No/%1 (&C)").arg(word["no"].toInt()));
 	leInput->clear();
@@ -190,33 +198,46 @@ void MainWindow::wordParamInc(QString key, int inc)
 		return;
 
 	int n = status.index;
-	int lesson = 0;
-	foreach (lesson_t l, lessons) {
-		if (n < l.count)
-			break;
-		n -= l.count;
-		lesson++;
+	int u;
+	for (u = 0; u < units.count(); u++) {
+		if (n < units.at(u).words.count())
+			goto found;
+		n -= units.at(u).words.count();
 	}
+	return;
 
-	QString lKey = root.keys().at(lesson);
-	QJsonArray array(root[lKey].toArray());
-	QJsonObject word(array[n].toObject());
+found:
+	//const Unit &unit = units.at(u);
+	Word &word = units[u].words[n];
+
 	word[key] = word[key].toInt() + inc;
 	word["time"] = QDateTime::currentDateTime().toString(Qt::ISODate);
-	array[n] = word;
-	root[lKey] = array;
 
-	probabilities[status.index] = probability(word);
-	debugProb();
+	probabilities[status.index] = word.weight(info);
+	//debugProb();
 
 	newWord();
 	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
 
-	QByteArray json = QJsonDocument(root).toJson();
+	QByteArray json = toJsonDocument().toJson();
 	docFile.seek(0);
 	docFile.write(json);
 	docFile.resize(json.size());
 	docFile.flush();
+}
+
+QJsonDocument MainWindow::toJsonDocument()
+{
+	QJsonObject root;
+
+	root.insert("info", info.toJsonObject());
+
+	QJsonObject payload;
+	foreach (const Unit &unit, units)
+		payload.insert(unit.name, unit.toJsonArray());
+	root.insert("payload", payload);
+
+	return QJsonDocument(root);
 }
 
 void MainWindow::debugProb() const
@@ -225,11 +246,4 @@ void MainWindow::debugProb() const
 	for (float p:probabilities)
 		map[p] += 1;
 	qDebug() << "Probabilities:" << map;
-}
-
-float MainWindow::probability(QJsonObject word)
-{
-	int yes = word["yes"].toInt();
-	int no = word["no"].toInt();
-	return no > yes ? 2.f - exp(yes - no) : exp(no - yes);
 }

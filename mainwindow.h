@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include <QtWidgets>
-#include <drawing.h>
+#include "drawing.h"
+#include "structures.h"
 
 class MainWindow : public QMainWindow
 {
@@ -17,29 +18,26 @@ private slots:
 	void newWord();
 	void showWord();
 	void wordYes() {wordParamInc("yes", 1);}
+	void wordSkip() {wordParamInc("skip", 1);}
 	void wordNo() {wordParamInc("no", 1);}
 	void drawingMode();
 	void keyboardMode();
 
 private:
 	void wordParamInc(QString key, int inc);
+	QJsonDocument toJsonDocument();
 	void debugProb() const;
-	static float probability(QJsonObject word);
 
 	QLabel *lLesson, *lKana, *lKanji, *lEnglish;
 	QLineEdit *leInput;
 	QPushButton *pbShow, *pbLevel[3];
-	QPushButton *pbOpen, *pbSave, *pbNext, *pbClear;
+	QPushButton *pbOpen, *pbSave, *pbClear;
 	Drawing *drawing;
 
 	QFile docFile;
-	QJsonObject root;
+	Info info;
+	QVector<Unit> units;
 
-	struct lesson_t {
-		QString name;
-		int count;
-	};
-	QVector<lesson_t> lessons;
 	std::vector<float> probabilities;
 	std::discrete_distribution<int> distribution;
 	int wordCount;

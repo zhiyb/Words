@@ -8,14 +8,16 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Japanese
+TARGET = Words
 TEMPLATE = app
 
 CONFIG	+= c++11
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    drawing.cpp
+    drawing.cpp \
+    structures.cpp
 
 HEADERS  += mainwindow.h \
-    drawing.h
+    drawing.h \
+    structures.h

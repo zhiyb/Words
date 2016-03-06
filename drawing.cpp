@@ -16,6 +16,8 @@ void Drawing::clear()
 void Drawing::resizeEvent(QResizeEvent *)
 {
 	QPixmap pix(width(), height());
+	if (pix.isNull())
+		return;
 	pix.fill();
 	QPainter painter(&pix);
 	painter.drawPixmap(0, 0, pixmap);
