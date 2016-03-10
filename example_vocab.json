@@ -1,8 +1,11 @@
 {
     "Japanese JAPA9018": {
         "info": {
-            "time": "2016-03-06T16:05:43",
+            "time": "2016-03-10T01:14:07",
             "type": {
+                "english": "QString",
+                "kana": "QString",
+                "kanji": "QString",
                 "no": "int",
                 "skip": "int",
                 "time": "QDateTime",
@@ -11,7 +14,7 @@
             "weight": {
                 "no": 1,
                 "skip": 0.20000000000000001,
-                "time": -0.0010000000474974513,
+                "time": -1.1574074051168282e-05,
                 "yes": -0.75
             }
         },
@@ -222,8 +225,8 @@
                     "kana": "しんぶん",
                     "kanji": "新聞",
                     "no": 1,
-                    "time": "2016-01-22T02:04:07",
-                    "yes": 3
+                    "time": "2016-03-10T01:13:40",
+                    "yes": 4
                 },
                 {
                     "english": "notebook",
@@ -331,8 +334,8 @@
                     "english": "desk",
                     "kana": "つくえ",
                     "kanji": "机",
-                    "no": 1,
-                    "time": "2016-01-22T03:58:54",
+                    "no": 2,
+                    "time": "2016-03-10T01:13:57",
                     "yes": 3
                 },
                 {
@@ -694,8 +697,8 @@
                 {
                     "english": "Department store",
                     "kana": "デパート",
-                    "no": 4,
-                    "time": "2016-01-22T02:08:01",
+                    "no": 5,
+                    "time": "2016-03-09T23:44:14",
                     "yes": 5
                 },
                 {
@@ -1375,8 +1378,8 @@
                 {
                     "english": "Yes, it is.",
                     "kana": "そうですね。",
-                    "time": "2016-01-22T02:41:16",
-                    "yes": 4
+                    "time": "2016-03-09T23:42:24",
+                    "yes": 5
                 },
                 {
                     "english": "Thank you very much.",
@@ -1448,8 +1451,8 @@
                     "english": "Smoke [a cigrette]",
                     "kana": "すいます［たばこを～］",
                     "kanji": "吸います",
-                    "time": "2016-01-22T00:58:14",
-                    "yes": 2
+                    "time": "2016-03-06T16:16:52",
+                    "yes": 3
                 },
                 {
                     "english": "See, look at, watch",
@@ -2109,8 +2112,8 @@
                     "english": "Helpful, kind, considerate (not used about one's own family members)",
                     "kana": "しんせつ［な］",
                     "kanji": "親切［な］",
-                    "no": 2,
-                    "time": "2016-01-22T03:57:06",
+                    "no": 3,
+                    "time": "2016-03-09T23:42:45",
                     "yes": 6
                 },
                 {
@@ -3341,8 +3344,8 @@
                 {
                     "english": "Ten (things)",
                     "kanji": "十（とお）",
-                    "no": 1,
-                    "time": "2016-01-22T03:26:36",
+                    "no": 2,
+                    "time": "2016-03-06T16:09:46",
                     "yes": 3
                 },
                 {
@@ -3426,8 +3429,8 @@
                     "english": "5,000 yen",
                     "kanji": "五千円（ご・せん・えん）",
                     "no": 1,
-                    "time": "2016-01-22T03:22:32",
-                    "yes": 5
+                    "time": "2016-03-09T23:44:32",
+                    "yes": 6
                 },
                 {
                     "english": "100 yen",
@@ -3678,8 +3681,8 @@
                 {
                     "english": "What is it?",
                     "kanji": "何（なん）ですか。",
-                    "time": "2016-01-22T02:59:52",
-                    "yes": 3
+                    "time": "2016-03-10T01:14:07",
+                    "yes": 4
                 },
                 {
                     "english": "How many people",

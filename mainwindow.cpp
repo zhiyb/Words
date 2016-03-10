@@ -1,18 +1,11 @@
 #include "mainwindow.h"
-#include <chrono>
-#include <random>
-#include <functional>
 
 #define FONT_NORMAL	24
 #define FONT_LARGE	36
 
-using std::chrono::system_clock;
-
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
 {
-	unsigned seed = system_clock::now().time_since_epoch().count();
-	generator = new std::default_random_engine(seed);
 	QFont f(font());
 	f.setPointSize(FONT_NORMAL);
 	f.setFamily("Calibri");
@@ -74,33 +67,24 @@ void MainWindow::openFile()
 	QString file = QFileDialog::getOpenFileName(this, QString(), QString(), tr("Json document (*.json)"));
 	if (file.isEmpty())
 		return;
+
 	QFile f(file);
 	if (!f.open(QFile::ReadWrite)) {
 		QMessageBox::warning(this, tr("Error open file"), tr("Cannot open file for read & write"));
 		return;
 	}
+
 	QJsonParseError error;
 	QJsonDocument json(QJsonDocument::fromJson(f.readAll(), &error));
 	if (error.error != QJsonParseError::NoError) {
 		QMessageBox::warning(this, tr("Error load JSON"), tr("Error: %1\nOffset: %2").arg(error.errorString()).arg(error.offset));
 		return;
 	}
-	if (!json.isObject()) {
-		QMessageBox::warning(this, tr("Error load data"), tr("Invalid data format"));
+	QString err;
+	if (!(err = manager.fromJsonDocument(json)).isEmpty()) {
+		QMessageBox::warning(this, tr("Error load data"), err);
 		return;
 	}
-
-	QString key(json.object().keys().first());
-	QJsonObject object(json.object().value(key).toObject());
-	Group group(key, object);
-	if (!group.wordCount) {
-		QMessageBox::warning(this, tr("Error load data"), tr("Did not find any words"));
-		return;
-	}
-
-	this->group = group;
-	distribution = std::discrete_distribution<int>(group.probabilities.begin(), group.probabilities.end());
-	//group.debugProb();
 
 	f.close();
 	if (docFile.isOpen())
@@ -108,7 +92,7 @@ void MainWindow::openFile()
 	docFile.setFileName(file);
 	if (!docFile.open(QFile::ReadWrite)) {
 		QMessageBox::warning(this, tr("Error open file"), tr("Cannot open file for write"));
-		group = Group();
+		manager.clear();
 		return;
 	}
 
@@ -117,21 +101,13 @@ void MainWindow::openFile()
 
 void MainWindow::newWord()
 {
-	if (!group.wordCount)
+	Entry entry = manager.randomWord();
+	if (!entry.isValid())
 		return;
+	status.offset = entry.offset.global;
 
-	int n = status.index = distribution(*generator);
-	int u;
-	for (u = 0; u < group.units.count(); u++) {
-		if (n < group.units.at(u).words.count())
-			goto found;
-		n -= group.units.at(u).words.count();
-	}
-	return;
-
-found:
-	const Unit &unit = group.units.at(u);
-	const Word &word = unit.words.at(n);
+	const Unit &unit = *entry.unit;
+	const Word &word = *entry.word;
 	lKana->setVisible(false);
 	lKanji->setVisible(false);
 	lLesson->setText(unit.name);
@@ -172,43 +148,14 @@ void MainWindow::keyboardMode()
 
 void MainWindow::wordParamInc(QString key, int inc)
 {
-	if (!group.wordCount)
-		return;
-
-	int n = status.index;
-	int u;
-	for (u = 0; u < group.units.count(); u++) {
-		if (n < group.units.at(u).words.count())
-			goto found;
-		n -= group.units.at(u).words.count();
-	}
-	return;
-
-found:
-	//const Unit &unit = units.at(u);
-	Word &word = group.units[u].words[n];
-
-	group.info.lastTime = QDateTime::currentDateTime();
-	word[key] = word[key].toInt() + inc;
-	word["time"] = group.info.lastTime.toString(Qt::ISODate);
-
+	manager.incrementWordField(status.offset, key, inc);
 	newWord();
-	group.probabilities[status.index] = word.weight(group.info);
-	distribution = std::discrete_distribution<int>(group.probabilities.begin(), group.probabilities.end());
-	//debugProb();
 
 	if (!docFile.isOpen())
 		return;
-	QByteArray json = toJsonDocument().toJson();
+	QByteArray json = manager.toJsonDocument().toJson();
 	docFile.seek(0);
 	docFile.write(json);
 	docFile.resize(json.size());
 	docFile.flush();
-}
-
-QJsonDocument MainWindow::toJsonDocument()
-{
-	QJsonObject root;
-	root.insert(group.name, group.toJsonObject());
-	return QJsonDocument(root);
 }

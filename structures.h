@@ -6,53 +6,110 @@
 #include <QString>
 #include <QVariant>
 #include <QVariantHash>
+#include <QFile>
 
 typedef QHash<QString, double> Weight;
 typedef QHash<QString, int> Type;
+typedef QVector<float> Probabilities;
 
-struct Info
+class Info
 {
-	QJsonObject toJsonObject() const;
-	static Info fromJsonObject(const QJsonObject &object);
-
+	friend class Group;
+public:
 	Weight weights;
 	Type types;
 	QDateTime lastTime;
+
+private:
+	QJsonObject toJsonObject() const;
+	static Info fromJsonObject(const QJsonObject &object);
 };
 
-struct Word
+struct Entry;
+
+class Word
 {
+	friend class Unit;
+public:
 	Word() {}
-	Word(const QJsonObject &obj) : fields(obj.toVariantHash()) {}
 	double weight(const Info &info) const;
 	QVariant &operator[](const QString key) {return fields[key];}
 	const QVariant operator[](const QString key) const {return fields.value(key);}
-	const QJsonValue toJsonValue(const QString &key, const Info &i) const;
 
 	QVariantHash fields;
+
+private:
+	Word(const QJsonObject &obj) : fields(obj.toVariantHash()) {}
+	const QJsonValue toJsonValue(const QString &key, const Info &i) const;
 };
 
-struct Unit
+class Unit
 {
-	QJsonArray toJsonArray() const;
+	friend class Group;
+public:
+	Unit() {}
 
 	QString name;
 	QVector<Word> words;
-	Weight weightList;
+
+private:
+	Unit(const QString &name, const QJsonArray &array);
+	QJsonArray toJsonArray() const;
 };
 
-struct Group
+class Group
 {
+	friend class Manager;
+public:
 	Group() : wordCount(0) {}
-	Group(const QString &name, const QJsonObject &object);
-	const QJsonObject toJsonObject() const;
-	void debugProb() const;
 
 	QString name;
 	Info info;
 	QVector<Unit> units;
-	QVector<float> probabilities;
-	unsigned int wordCount;
+	int wordCount;
+
+private:
+	Group(const QString &name, const QJsonObject &object);
+	const QJsonObject toJsonObject() const;
+	void debugProb() const;
+	void updateEntry(Entry &entry, int offset);
+	void incrementWordField(const Entry &entry, const QString &key, int inc);
+
+	Probabilities probabilities;
+};
+
+struct Entry
+{
+	Entry() : word(0), unit(0), group(0) {}
+	bool isValid() {return word && unit && group;}
+
+	Word *word;
+	Unit *unit;
+	Group *group;
+	struct {
+		int global, group, unit, word;
+	} offset;
+};
+
+class Manager
+{
+public:
+	Manager();
+	QString fromJsonDocument(QJsonDocument json);
+	QJsonDocument toJsonDocument();
+	Entry entryAt(int offset);
+	void updateDistribution();
+	void clear() {groups.clear(); wordCount = 0;}
+	Entry randomWord();
+	void incrementWordField(int offset, const QString &key, int inc);
+
+	QVector<Group> groups;
+	int wordCount;
+	std::discrete_distribution<int> distribution;
+	std::default_random_engine *generator;
+
+private:
+	void updateDistribution(const Entry &entry);
 };
 
 #endif // STRUCTURES_H

@@ -1,6 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <chrono>
+#include <random>
+#include <functional>
+
 #include <QMainWindow>
 #include <QtWidgets>
 #include "drawing.h"
@@ -25,7 +29,7 @@ private slots:
 
 private:
 	void wordParamInc(QString key, int inc);
-	QJsonDocument toJsonDocument();
+	//QJsonDocument toJsonDocument();
 
 	QLabel *lLesson, *lKana, *lKanji, *lEnglish;
 	QLineEdit *leInput;
@@ -34,14 +38,10 @@ private:
 	Drawing *drawing;
 
 	QFile docFile;
-	Group group;
-	//QVector<Group> groups;
-
-	std::discrete_distribution<int> distribution;
-	std::default_random_engine *generator;
+	Manager manager;
 
 	struct status_t {
-		int index;
+		int offset;
 	} status;
 };
 
