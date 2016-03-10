@@ -21,7 +21,7 @@ static const struct {
 	{"no", 1.f, QMetaType::Int},
 	{"skip", 0.2f, QMetaType::Int},
 	{"time", -(1.f / 24.f / 60.f / 60.f), QMetaType::QDateTime},
-}, *ptr = defaults;
+}, *ptr;
 
 QJsonObject Info::toJsonObject() const
 {
@@ -62,6 +62,7 @@ Info Info::fromJsonObject(const QJsonObject &object)
 
 	info.groupWeight = object.value("groupWeight").toDouble(1.f);
 
+	ptr = defaults;
 	for (unsigned int i = 0; i != sizeof(defaults) / sizeof(*ptr); i++, ptr++) {
 		if (!info.weights.contains(ptr->name))
 			info.weights[ptr->name] = ptr->weight;
