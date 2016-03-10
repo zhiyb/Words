@@ -38,6 +38,7 @@ QJsonObject Info::toJsonObject() const
 	object.insert("type", type);
 
 	object.insert("time", lastTime.toString(Qt::ISODate));
+	object.insert("groupWeight", groupWeight);
 
 	return object;
 }
@@ -58,6 +59,8 @@ Info Info::fromJsonObject(const QJsonObject &object)
 		info.lastTime = QDateTime::fromString(object.value("time").toString(), Qt::ISODate);
 	else
 		info.lastTime = QDateTime::currentDateTime();
+
+	info.groupWeight = object.value("groupWeight").toDouble(1.f);
 
 	for (unsigned int i = 0; i != sizeof(defaults) / sizeof(*ptr); i++, ptr++) {
 		if (!info.weights.contains(ptr->name))
@@ -125,8 +128,6 @@ Group::Group(const QString &name, const QJsonObject &object)
 	for (QJsonObject::const_iterator it = payload.begin(); it != payload.end(); it++) {
 		Unit unit(it.key(), it.value().toArray());
 		units.append(unit);
-		for (const Word &w: unit.words)
-			probabilities.append(w.weight(info));
 		count += unit.words.count();
 	}
 	wordCount = count;
@@ -143,14 +144,6 @@ const QJsonObject Group::toJsonObject() const
 	object.insert("payload", payload);
 
 	return object;
-}
-
-void Group::debugProb() const
-{
-	QMap<float, int> map;
-	for (float p:probabilities)
-		map[p] += 1;
-	qDebug() << "Probabilities:" << map;
 }
 
 void Group::updateEntry(Entry &entry, int offset)
@@ -178,7 +171,6 @@ void Group::incrementWordField(const Entry &entry, const QString &key, int inc)
 	Word &word = *entry.word;
 	word[key] = word[key].toInt() + inc;
 	word["time"] = current.toString(Qt::ISODate);
-	probabilities[entry.offset.word] = word.weight(info);
 }
 
 Manager::Manager()
@@ -237,10 +229,13 @@ Entry Manager::entryAt(int offset)
 
 void Manager::updateDistribution()
 {
-	// TODO: distribution for multiple groups
-	Probabilities &prob = groups.begin()->probabilities;
-	distribution = std::discrete_distribution<int>(prob.begin(), prob.end());
-	//groups.begin()->debugProb();
+	probabilities.clear();
+	for (const Group &group: groups)
+		for (const Unit &unit: group.units)
+			for (const Word &word: unit.words)
+				probabilities.push_back(word.weight(group.info));
+	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
+	//debugProb();
 }
 
 Entry Manager::randomWord()
@@ -265,5 +260,16 @@ void Manager::incrementWordField(int offset, const QString &key, int inc)
 
 void Manager::updateDistribution(const Entry &entry)
 {
-	updateDistribution();
+	probabilities[entry.offset.global] = \
+			entry.word->weight(entry.group->info) * \
+			entry.group->info.groupWeight;
+	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
+}
+
+void Manager::debugProb() const
+{
+	QMap<double, int> map;
+	for (double p: probabilities)
+		map[p]++;
+	qDebug() << "Probabilities:" << map;
 }

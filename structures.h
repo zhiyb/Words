@@ -10,14 +10,15 @@
 
 typedef QHash<QString, double> Weight;
 typedef QHash<QString, int> Type;
-typedef QVector<float> Probabilities;
+typedef QVector<double> Probabilities;
 
 class Info
 {
 	friend class Group;
 public:
-	Weight weights;
 	Type types;
+	Weight weights;
+	double groupWeight;
 	QDateTime lastTime;
 
 private:
@@ -71,11 +72,8 @@ public:
 private:
 	Group(const QString &name, const QJsonObject &object);
 	const QJsonObject toJsonObject() const;
-	void debugProb() const;
 	void updateEntry(Entry &entry, int offset);
 	void incrementWordField(const Entry &entry, const QString &key, int inc);
-
-	Probabilities probabilities;
 };
 
 struct Entry
@@ -110,6 +108,9 @@ public:
 
 private:
 	void updateDistribution(const Entry &entry);
+	void debugProb() const;
+
+	Probabilities probabilities;
 };
 
 #endif // STRUCTURES_H

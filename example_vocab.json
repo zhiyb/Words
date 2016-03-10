@@ -1,7 +1,8 @@
 {
     "Japanese JAPA9018": {
         "info": {
-            "time": "2016-03-10T01:14:07",
+            "groupWeight": 1,
+            "time": "2016-03-10T01:45:09",
             "type": {
                 "english": "QString",
                 "kana": "QString",
@@ -864,8 +865,8 @@
                     "english": "lunchtime",
                     "kana": "ひるやすみ",
                     "kanji": "昼休み",
-                    "time": "2016-01-22T01:47:04",
-                    "yes": 2
+                    "time": "2016-03-10T01:45:09",
+                    "yes": 3
                 },
                 {
                     "english": "Examination, test",
@@ -2618,8 +2619,8 @@
                     "english": "Katakana script",
                     "kana": "かたかな",
                     "kanji": "片仮名",
-                    "time": "2016-01-22T01:55:33",
-                    "yes": 2
+                    "time": "2016-03-10T01:44:17",
+                    "yes": 3
                 },
                 {
                     "english": "The Roman alphabet",
@@ -3054,8 +3055,8 @@
                 {
                     "english": "A girl student",
                     "kanji": "女子学生（じょ・し・がく・せい）",
-                    "no": 1,
-                    "time": "2016-01-22T03:41:31",
+                    "no": 2,
+                    "time": "2016-03-10T01:26:38",
                     "yes": 4
                 },
                 {
@@ -3113,8 +3114,8 @@
                 {
                     "english": "A teacher",
                     "kanji": "先生（せん・せい）",
-                    "time": "2016-01-21T23:35:29",
-                    "yes": 3
+                    "time": "2016-03-10T01:44:00",
+                    "yes": 4
                 },
                 {
                     "english": "Last month",
