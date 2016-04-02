@@ -28,7 +28,7 @@
     "Japanese JAPA9018": {
         "info": {
             "groupWeight": 1,
-            "time": "2016-03-10T02:15:04",
+            "time": "2016-04-02T03:01:33",
             "type": {
                 "english": "QString",
                 "kana": "QString",
@@ -554,8 +554,8 @@
                 {
                     "english": "escalator",
                     "kana": "エスカレーター",
-                    "time": "2016-01-22T03:39:01",
-                    "yes": 2
+                    "time": "2016-04-02T03:01:19",
+                    "yes": 3
                 },
                 {
                     "english": "Vending machine",
@@ -1146,7 +1146,8 @@
                     "english": "On foot",
                     "kana": "あるいて",
                     "kanji": "歩いて",
-                    "time": "2016-01-22T01:59:46",
+                    "skip": 1,
+                    "time": "2016-03-10T02:46:12",
                     "yes": 2
                 },
                 {
@@ -1174,8 +1175,8 @@
                     "english": "She, girlfriend, lover",
                     "kana": "かのじょ",
                     "kanji": "彼女",
-                    "time": "2016-01-22T03:32:24",
-                    "yes": 2
+                    "time": "2016-04-02T03:01:33",
+                    "yes": 3
                 },
                 {
                     "english": "family",
@@ -1856,8 +1857,8 @@
                     "kana": "ならいます",
                     "kanji": "習います",
                     "no": 2,
-                    "time": "2016-01-22T03:19:26",
-                    "yes": 4
+                    "time": "2016-03-10T02:32:10",
+                    "yes": 5
                 },
                 {
                     "english": "Make [a telephone call]",
@@ -2168,7 +2169,8 @@
                 {
                     "english": "Fine, nice, wonderful",
                     "kana": "すてき［な］",
-                    "time": "2016-01-22T02:23:15",
+                    "no": 1,
+                    "time": "2016-03-10T02:46:41",
                     "yes": 3
                 },
                 {
@@ -2350,8 +2352,8 @@
                     "english": "food",
                     "kana": "たべもの",
                     "kanji": "食べ物",
-                    "time": "2016-01-22T02:49:13",
-                    "yes": 2
+                    "time": "2016-03-10T02:45:48",
+                    "yes": 3
                 },
                 {
                     "english": "place",

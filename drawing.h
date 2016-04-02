@@ -1,7 +1,6 @@
 #ifndef DRAWING_H
 #define DRAWING_H
 
-#include <QWidget>
 #include <QtWidgets>
 
 class Drawing : public QWidget

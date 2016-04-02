@@ -31,7 +31,7 @@ private:
 	void wordParamInc(QString key, int inc);
 	//QJsonDocument toJsonDocument();
 
-	QLabel *lLesson, *lKana, *lKanji, *lEnglish;
+	QLabel *lGroup, *lUnit, *lKana, *lKanji, *lEnglish;
 	QLineEdit *leInput;
 	QPushButton *pbShow, *pbLevel[3];
 	QPushButton *pbOpen, *pbSave, *pbClear;

@@ -16,12 +16,20 @@ MainWindow::MainWindow(QWidget *parent)
 	QVBoxLayout *lay = new QVBoxLayout(w);
 	QHBoxLayout *hlay;
 
-	lay->addWidget(lLesson = new QLabel("Lesson *"));
+	QLabel *lSplit;
+	lay->addLayout(hlay = new QHBoxLayout);
+	hlay->addWidget(lGroup = new QLabel("Group *"));
+	hlay->addWidget(lSplit = new QLabel(tr(" - ")));
+	hlay->addWidget(lUnit = new QLabel("Unit *"));
+	hlay->addStretch();
+	f.setPointSize(FONT_NORMAL / 2);
+	lGroup->setFont(f);
+	lSplit->setFont(f);
+	lUnit->setFont(f);
+
 	lay->addWidget(lKana = new QLabel("Kana"));
 	lay->addWidget(lKanji = new QLabel("Kanji"));
 	lay->addWidget(lEnglish = new QLabel("English"));
-	f.setPointSize(FONT_NORMAL / 2);
-	lLesson->setFont(f);
 	f.setPointSize(FONT_LARGE);
 	lEnglish->setFont(f);
 	lEnglish->setWordWrap(true);
@@ -106,11 +114,11 @@ void MainWindow::newWord()
 		return;
 	status.offset = entry.offset.global;
 
-	const Unit &unit = *entry.unit;
 	const Word &word = *entry.word;
 	lKana->setVisible(false);
 	lKanji->setVisible(false);
-	lLesson->setText(unit.name);
+	lGroup->setText(entry.group->name);
+	lUnit->setText(entry.unit->name);
 	lKana->setText(word["kana"].toString());
 	lKanji->setText(word["kanji"].toString());
 	lEnglish->setText(word["english"].toString());
