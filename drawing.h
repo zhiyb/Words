@@ -9,6 +9,7 @@ class Drawing : public QWidget
 public:
 	explicit Drawing(QWidget *parent = 0);
 	void setColour(QColor clr) {this->clr = clr;}
+	QColor colour() const {return clr;}
 
 signals:
 	void active();

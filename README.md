@@ -1,2 +1,2 @@
 # Words
-Qt program for remembering (Japanese) words
+Qt program for remembering words

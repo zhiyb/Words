@@ -6,18 +6,26 @@
 #include <QString>
 #include <QVariant>
 #include <QVariantHash>
+#include <QDateTime>
 #include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
 
 typedef QHash<QString, double> Weight;
 typedef QHash<QString, int> Type;
+typedef QHash<QString, QVariantHash> Param;
 typedef QVector<double> Probabilities;
 
 class Info
 {
 	friend class Group;
 public:
+	int type(const QString &key) const {return types.value(key, QMetaType::QString);}
+
 	Type types;
 	Weight weights;
+	Param params;
 	double groupWeight;
 	QDateTime lastTime;
 
@@ -41,7 +49,7 @@ public:
 
 private:
 	Word(const QJsonObject &obj) : fields(obj.toVariantHash()) {}
-	const QJsonValue toJsonValue(const QString &key, const Info &i) const;
+	const QJsonValue toJsonValue(const QString &key, const Info &info) const;
 };
 
 class Unit

@@ -6,6 +6,7 @@
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
 {
+	status.offset = 0;
 	QFont f(font());
 	f.setPointSize(FONT_NORMAL);
 	f.setFamily("Calibri");
@@ -27,18 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
 	lSplit->setFont(f);
 	lUnit->setFont(f);
 
-	lay->addWidget(lKana = new QLabel("Kana"));
-	lay->addWidget(lKanji = new QLabel("Kanji"));
-	lay->addWidget(lEnglish = new QLabel("English"));
-	f.setPointSize(FONT_LARGE);
-	lEnglish->setFont(f);
-	lEnglish->setWordWrap(true);
-	f.setFamily("Yu Gothic");
-	f.setPointSize(FONT_NORMAL);
-	lKana->setFont(f);
-	lKana->setWordWrap(true);
-	lKanji->setFont(f);
-	lKanji->setWordWrap(true);
+	lay->addLayout(labelsLayout = new QVBoxLayout);
 
 	lay->addWidget(leInput = new QLineEdit);
 	f.setPointSize(FONT_LARGE);
@@ -49,15 +39,10 @@ MainWindow::MainWindow(QWidget *parent)
 	hlay->addWidget(pbLevel[0] = new QPushButton(tr("Yes (&Z)")));
 	hlay->addWidget(pbLevel[1] = new QPushButton(tr("Skip (&X)")));
 	hlay->addWidget(pbLevel[2] = new QPushButton(tr("No (&C)")));
-
-	//lay->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Preferred, QSizePolicy::Expanding));
-	//lay->addLayout(hlay = new QHBoxLayout);
 	hlay->addWidget(pbOpen = new QPushButton(tr("&Open")));
-	//hlay->addWidget(pbSave = new QPushButton(tr("S&ave")));
-
 	hlay->addWidget(pbClear = new QPushButton(tr("Clea&r")));
-	lay->addWidget(drawing = new Drawing(this));
 
+	lay->addWidget(drawing = new Drawing(this));
 	drawing->setColour(Qt::black);
 
 	connect(pbOpen, SIGNAL(clicked(bool)), this, SLOT(openFile()));
@@ -114,17 +99,40 @@ void MainWindow::newWord()
 		return;
 	status.offset = entry.offset.global;
 
-	const Word &word = *entry.word;
-	lKana->setVisible(false);
-	lKanji->setVisible(false);
+	foreach (QLabel *label, labels)
+		label->setVisible(false);
+
+	const Info &info = entry.group->info;
+	const QVariantHash &fields = entry.word->fields;
+	for (QVariantHash::ConstIterator it = fields.constBegin(); it != fields.constEnd(); it++) {
+		if (info.type(it.key()) != QMetaType::QString)
+			continue;
+		if (!labels.contains(it.key())) {
+			QLabel *label = new QLabel;
+			labelsLayout->addWidget(label);
+			labels[it.key()] = label;
+		}
+		QLabel *label = labels[it.key()];
+		label->setText(it.value().toString());
+		const QVariantHash &param = info.params[it.key()];
+		label->setVisible(!param["hidden"].toBool());
+		if (param.contains("font")) {
+			QFont f(font());
+			f.fromString(param.value("font").toString());
+			label->setFont(f);
+		}
+		if (param.contains("index")) {
+			int index = param["index"].toInt();
+			labelsLayout->takeAt(labelsLayout->indexOf(label));
+			labelsLayout->insertWidget(index, label);
+		}
+	}
+
 	lGroup->setText(entry.group->name);
 	lUnit->setText(entry.unit->name);
-	lKana->setText(word["kana"].toString());
-	lKanji->setText(word["kanji"].toString());
-	lEnglish->setText(word["english"].toString());
-	pbLevel[0]->setText(tr("Yes/%1 (&Z)").arg(word["yes"].toInt()));
-	pbLevel[1]->setText(tr("Skip/%1 (&X)").arg(word["skip"].toInt()));
-	pbLevel[2]->setText(tr("No/%1 (&C)").arg(word["no"].toInt()));
+	pbLevel[0]->setText(tr("Yes/%1 (&Z)").arg(fields["yes"].toInt()));
+	pbLevel[1]->setText(tr("Skip/%1 (&X)").arg(fields["skip"].toInt()));
+	pbLevel[2]->setText(tr("No/%1 (&C)").arg(fields["no"].toInt()));
 	leInput->clear();
 	drawing->clear();
 	drawing->setColour(Qt::black);
@@ -132,12 +140,22 @@ void MainWindow::newWord()
 
 void MainWindow::showWord()
 {
-	lKana->setVisible(lKana->text().isEmpty() ? false : !lKana->isVisible());
-	lKanji->setVisible(lKanji->text().isEmpty() ? false : !lKanji->isVisible());
-	if (lKana->isVisible() || lKanji->isVisible())
-		drawing->setColour(Qt::blue);
-	else
-		drawing->setColour(Qt::black);
+	Entry entry = manager.entryAt(status.offset);
+	if (!entry.isValid())
+		return;
+
+	const Info &info = entry.group->info;
+	const QVariantHash &fields = entry.word->fields;
+	for (QVariantHash::ConstIterator it = fields.constBegin(); it != fields.constEnd(); it++) {
+		if (info.type(it.key()) != QMetaType::QString)
+			continue;
+		QLabel *label = labels[it.key()];
+		const QVariantHash &param = info.params[it.key()];
+		if (param["hidden"].toBool() && !label->text().isEmpty())
+			label->setVisible(!label->isVisible());
+	}
+
+	drawing->setColour(drawing->colour() == Qt::black ? Qt::blue : Qt::black);
 }
 
 void MainWindow::drawingMode()

@@ -29,12 +29,13 @@ private slots:
 
 private:
 	void wordParamInc(QString key, int inc);
-	//QJsonDocument toJsonDocument();
 
-	QLabel *lGroup, *lUnit, *lKana, *lKanji, *lEnglish;
+	QLabel *lGroup, *lUnit;
+	QVBoxLayout *labelsLayout;
+	QHash<QString, QLabel *> labels;
 	QLineEdit *leInput;
 	QPushButton *pbShow, *pbLevel[3];
-	QPushButton *pbOpen, *pbSave, *pbClear;
+	QPushButton *pbOpen, *pbClear;
 	Drawing *drawing;
 
 	QFile docFile;

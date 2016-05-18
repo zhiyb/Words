@@ -2,6 +2,17 @@
     "English": {
         "info": {
             "groupWeight": 1,
+            "param": {
+                "mean": {
+                    "font": "Calibri, 36",
+                    "index": 1
+                },
+                "word": {
+                    "font": "Calibri, 36",
+                    "hidden": true,
+                    "index": 0
+                }
+            },
             "time": "2016-03-10T02:14:59",
             "type": {
                 "no": "int",
@@ -28,11 +39,24 @@
     "Japanese JAPA9018": {
         "info": {
             "groupWeight": 1,
-            "time": "2016-04-02T03:01:33",
+            "param": {
+                "english": {
+                    "font": "Calibri, 36",
+                    "index": 2
+                },
+                "kana": {
+                    "font": "Yu Gothic, 24",
+                    "hidden": true,
+                    "index": 0
+                },
+                "kanji": {
+                    "font": "Yu Gothic, 24",
+                    "hidden": true,
+                    "index": 1
+                }
+            },
+            "time": "2016-05-18T01:17:38",
             "type": {
-                "english": "QString",
-                "kana": "QString",
-                "kanji": "QString",
                 "no": "int",
                 "skip": "int",
                 "time": "QDateTime",
@@ -115,8 +139,8 @@
                     "english": "Employee of ~ company (used with a company's name)",
                     "kana": "しゃいん",
                     "kanji": "社員",
-                    "time": "2016-01-21T22:55:50",
-                    "yes": 2
+                    "time": "2016-05-17T23:41:44",
+                    "yes": 3
                 },
                 {
                     "english": "Bank employee",
@@ -184,8 +208,8 @@
                 {
                     "english": "no",
                     "kana": "いいえ",
-                    "time": "2016-01-22T01:08:25",
-                    "yes": 2
+                    "time": "2016-05-18T00:48:58",
+                    "yes": 3
                 }
             ],
             "Lesson 2": [
@@ -272,8 +296,8 @@
                     "kana": "めいし",
                     "kanji": "名刺",
                     "no": 2,
-                    "time": "2016-01-22T00:07:33",
-                    "yes": 5
+                    "time": "2016-05-18T01:03:33",
+                    "yes": 6
                 },
                 {
                     "english": "(credit) card",
@@ -419,8 +443,8 @@
                     "english": "what",
                     "kana": "なん",
                     "kanji": "何",
-                    "time": "2016-01-22T02:37:30",
-                    "yes": 3
+                    "time": "2016-05-18T01:17:38",
+                    "yes": 4
                 },
                 {
                     "english": "so",
@@ -548,13 +572,14 @@
                     "english": "Lift, elevator",
                     "kana": "エレベーター",
                     "no": 1,
-                    "time": "2016-01-22T03:49:30",
-                    "yes": 4
+                    "time": "2016-05-18T01:17:30",
+                    "yes": 5
                 },
                 {
                     "english": "escalator",
                     "kana": "エスカレーター",
-                    "time": "2016-04-02T03:01:19",
+                    "skip": 1,
+                    "time": "2016-05-18T01:03:09",
                     "yes": 3
                 },
                 {
@@ -687,8 +712,8 @@
                     "kana": "ねます",
                     "kanji": "寝ます",
                     "no": 1,
-                    "time": "2016-03-06T14:17:59",
-                    "yes": 4
+                    "time": "2016-05-18T00:03:03",
+                    "yes": 5
                 },
                 {
                     "english": "work",
@@ -718,8 +743,8 @@
                     "kana": "おわります",
                     "kanji": "終わります",
                     "no": 1,
-                    "time": "2016-01-22T00:37:27",
-                    "yes": 3
+                    "time": "2016-05-18T00:50:03",
+                    "yes": 4
                 },
                 {
                     "english": "Department store",
@@ -966,7 +991,8 @@
                     "english": "Friday",
                     "kana": "きんようび",
                     "kanji": "金曜日",
-                    "time": "2016-01-22T02:24:10",
+                    "skip": 1,
+                    "time": "2016-05-18T01:12:03",
                     "yes": 2
                 },
                 {
@@ -999,8 +1025,8 @@
                 {
                     "english": "Up to ~, until ~",
                     "kana": "～まで",
-                    "time": "2016-01-22T03:01:19",
-                    "yes": 3
+                    "time": "2016-05-18T00:51:06",
+                    "yes": 4
                 },
                 {
                     "english": "And (used to connect nouns)",
@@ -1028,8 +1054,8 @@
                     "english": "What number",
                     "kana": "なんばん",
                     "kanji": "何番",
-                    "time": "2016-01-22T02:59:01",
-                    "yes": 2
+                    "time": "2016-05-17T23:42:48",
+                    "yes": 3
                 },
                 {
                     "english": "Your place",
@@ -1848,8 +1874,8 @@
                     "english": "teach",
                     "kana": "おしえます",
                     "kanji": "教えます",
-                    "no": 2,
-                    "time": "2016-01-22T03:33:17",
+                    "no": 3,
+                    "time": "2016-05-18T01:06:35",
                     "yes": 3
                 },
                 {
@@ -2184,8 +2210,8 @@
                     "english": "Small, little",
                     "kana": "ちいさい",
                     "kanji": "小さい",
-                    "time": "2016-01-22T01:00:23",
-                    "yes": 3
+                    "time": "2016-05-18T00:07:32",
+                    "yes": 4
                 },
                 {
                     "english": "New, fresh",
@@ -3255,8 +3281,8 @@
                 {
                     "english": "Five (things)",
                     "kanji": "五（いつ）つ",
-                    "time": "2016-01-22T01:15:15",
-                    "yes": 2
+                    "time": "2016-05-18T00:59:37",
+                    "yes": 3
                 },
                 {
                     "english": "The 5th day",

@@ -3,10 +3,6 @@
 #include <functional>
 
 #include <QFile>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <QJsonObject>
-#include <QDateTime>
 #include <QDebug>
 #include "structures.h"
 
@@ -28,14 +24,19 @@ QJsonObject Info::toJsonObject() const
 	QJsonObject object;
 
 	QJsonObject weight;
-	for (Weight::const_iterator it = weights.constBegin(); it != weights.constEnd(); it++)
+	for (Weight::ConstIterator it = weights.constBegin(); it != weights.constEnd(); it++)
 		weight.insert(it.key(), it.value());
 	object.insert("weight", weight);
 
 	QJsonObject type;
-	for (Type::const_iterator it = types.constBegin(); it != types.constEnd(); it++)
+	for (Type::ConstIterator it = types.constBegin(); it != types.constEnd(); it++)
 		type.insert(it.key(), QMetaType::typeName(it.value()));
 	object.insert("type", type);
+
+	QJsonObject param;
+	for (Param::ConstIterator it = params.constBegin(); it != params.constEnd(); it++)
+		param.insert(it.key(), QJsonObject::fromVariantHash(it.value()));
+	object.insert("param", param);
 
 	object.insert("time", lastTime.toString(Qt::ISODate));
 	object.insert("groupWeight", groupWeight);
@@ -48,12 +49,16 @@ Info Info::fromJsonObject(const QJsonObject &object)
 	Info info;
 
 	const QJsonObject weight = object.value("weight").toObject();
-	for (QJsonObject::const_iterator it = weight.begin(); it != weight.end(); it++)
+	for (QJsonObject::ConstIterator it = weight.begin(); it != weight.end(); it++)
 		info.weights[it.key()] = it.value().toDouble();
 
 	const QJsonObject type = object.value("type").toObject();
-	for (QJsonObject::const_iterator it = type.begin(); it != type.end(); it++)
+	for (QJsonObject::ConstIterator it = type.begin(); it != type.end(); it++)
 		info.types[it.key()] = QMetaType::type(it.value().toString().toLocal8Bit());
+
+	const QJsonObject param = object.value("param").toObject();
+	for (QJsonObject::ConstIterator it = param.begin(); it != param.end(); it++)
+		info.params[it.key()] = it.value().toObject().toVariantHash();
 
 	if (object.contains("time"))
 		info.lastTime = QDateTime::fromString(object.value("time").toString(), Qt::ISODate);
@@ -75,8 +80,8 @@ Info Info::fromJsonObject(const QJsonObject &object)
 double Word::weight(const Info &info) const
 {
 	double w = 0.f;
-	for (QVariantHash::const_iterator it = fields.constBegin(); it != fields.constEnd(); it++) {
-		switch (info.types[it.key()]) {
+	for (QVariantHash::ConstIterator it = fields.constBegin(); it != fields.constEnd(); it++) {
+		switch (info.type(it.key())) {
 		case QMetaType::Int:
 		case QMetaType::Double:
 			w += it.value().toDouble() * info.weights[it.key()];
@@ -91,9 +96,9 @@ double Word::weight(const Info &info) const
 	return w;
 }
 
-const QJsonValue Word::toJsonValue(const QString &key, const Info &i) const
+const QJsonValue Word::toJsonValue(const QString &key, const Info &info) const
 {
-	switch (i.types[key]) {
+	switch (info.type(key)) {
 	case QMetaType::Int:
 		return QJsonValue(fields[key].toInt());
 	//case QMetaType::QDateTime:
@@ -126,7 +131,7 @@ Group::Group(const QString &name, const QJsonObject &object)
 
 	int count = 0;
 	QJsonObject payload = object.value("payload").toObject();
-	for (QJsonObject::const_iterator it = payload.begin(); it != payload.end(); it++) {
+	for (QJsonObject::ConstIterator it = payload.begin(); it != payload.end(); it++) {
 		Unit unit(it.key(), it.value().toArray());
 		units.append(unit);
 		count += unit.words.count();
