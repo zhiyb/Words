@@ -101,6 +101,7 @@ class Manager
 {
 public:
 	Manager();
+	~Manager() {delete generator;}
 	QString fromJsonDocument(QJsonDocument json);
 	QJsonDocument toJsonDocument();
 	Entry entryAt(int offset);

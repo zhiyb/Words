@@ -16,7 +16,7 @@ static const struct {
 	{"yes", -0.75f, QMetaType::Int},
 	{"no", 1.f, QMetaType::Int},
 	{"skip", 0.2f, QMetaType::Int},
-	{"time", -(1.f / 24.f / 60.f / 60.f), QMetaType::QDateTime},
+	{"time", -(1.f / 30.f / 24.f / 60.f / 60.f), QMetaType::QDateTime},
 }, *ptr;
 
 QJsonObject Info::toJsonObject() const
@@ -79,17 +79,19 @@ Info Info::fromJsonObject(const QJsonObject &object)
 
 double Word::weight(const Info &info) const
 {
+	if (!fields.contains("time"))	// Assuming 1 year
+		return 365.f * 24.f * 3600.f;	//std::numeric_limits<double>::infinity();
 	double w = 0.f;
 	for (QVariantHash::ConstIterator it = fields.constBegin(); it != fields.constEnd(); it++) {
 		switch (info.type(it.key())) {
 		case QMetaType::Int:
 		case QMetaType::Double:
-			w += it.value().toDouble() * info.weights[it.key()];
+			w += it.value().toDouble() * exp(info.weights[it.key()]);
 			break;
 		case QMetaType::QDateTime:
 			QVariant v = it.value();
-			w += (double)info.lastTime.secsTo(v.toDateTime()) * \
-					info.weights[it.key()];
+			w += exp((double)info.lastTime.secsTo(v.toDateTime()) * \
+					info.weights[it.key()]);
 			break;
 		}
 	}
@@ -266,16 +268,30 @@ void Manager::incrementWordField(int offset, const QString &key, int inc)
 
 void Manager::updateDistribution(const Entry &entry)
 {
+#if 1
+	updateDistribution();
+	Q_UNUSED(entry);
+#else
 	probabilities[entry.offset.global] = \
 			entry.word->weight(entry.group->info) * \
 			entry.group->info.groupWeight;
 	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
+#endif
 }
 
 void Manager::debugProb() const
 {
 	QMap<double, int> map;
+#if 0
 	for (double p: probabilities)
 		map[p]++;
+#else
+	for (double p: distribution.probabilities()) {
+		if (!std::isfinite(p))
+			p = std::numeric_limits<double>::infinity();
+		map[p]++;
+	}
+#endif
 	qDebug() << "Probabilities:" << map;
+	//qDebug() << QVector<double>::fromStdVector(distribution.probabilities());
 }
