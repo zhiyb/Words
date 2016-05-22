@@ -109,6 +109,7 @@ void MainWindow::newWord()
 			continue;
 		if (!labels.contains(it.key())) {
 			QLabel *label = new QLabel;
+			label->setWordWrap(true);
 			labelsLayout->addWidget(label);
 			labels[it.key()] = label;
 		}

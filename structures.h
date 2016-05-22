@@ -87,7 +87,7 @@ private:
 struct Entry
 {
 	Entry() : word(0), unit(0), group(0) {}
-	bool isValid() {return word && unit && group;}
+	bool isValid() const {return word && unit && group;}
 
 	Word *word;
 	Unit *unit;
@@ -117,7 +117,7 @@ public:
 
 private:
 	void updateDistribution(const Entry &entry);
-	void debugProb() const;
+	void debugProb();
 
 	Probabilities probabilities;
 };

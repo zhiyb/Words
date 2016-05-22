@@ -6,6 +6,7 @@
 #include <QDebug>
 #include "structures.h"
 
+using namespace std;
 using std::chrono::system_clock;
 
 static const struct {
@@ -16,7 +17,7 @@ static const struct {
 	{"yes", -0.75f, QMetaType::Int},
 	{"no", 1.f, QMetaType::Int},
 	{"skip", 0.2f, QMetaType::Int},
-	{"time", -(1.f / 30.f / 24.f / 60.f / 60.f), QMetaType::QDateTime},
+	{"time", -(1.f / 7.f / 24.f / 60.f / 60.f), QMetaType::QDateTime},
 }, *ptr;
 
 QJsonObject Info::toJsonObject() const
@@ -86,7 +87,8 @@ double Word::weight(const Info &info) const
 		switch (info.type(it.key())) {
 		case QMetaType::Int:
 		case QMetaType::Double:
-			w += it.value().toDouble() * exp(info.weights[it.key()]);
+			w += it.value().toDouble() * exp(abs(info.weights[it.key()])) *
+					copysign(1.f, info.weights[it.key()]);
 			break;
 		case QMetaType::QDateTime:
 			QVariant v = it.value();
@@ -95,7 +97,7 @@ double Word::weight(const Info &info) const
 			break;
 		}
 	}
-	return w;
+	return w < 1.f ? exp(w) : w;
 }
 
 const QJsonValue Word::toJsonValue(const QString &key, const Info &info) const
@@ -243,7 +245,7 @@ void Manager::updateDistribution()
 			for (const Word &word: unit.words)
 				probabilities.push_back(word.weight(group.info));
 	distribution = std::discrete_distribution<int>(probabilities.begin(), probabilities.end());
-	//debugProb();
+	debugProb();
 }
 
 Entry Manager::randomWord()
@@ -279,7 +281,7 @@ void Manager::updateDistribution(const Entry &entry)
 #endif
 }
 
-void Manager::debugProb() const
+void Manager::debugProb()
 {
 	QMap<double, int> map;
 #if 0
@@ -294,4 +296,18 @@ void Manager::debugProb() const
 #endif
 	qDebug() << "Probabilities:" << map;
 	//qDebug() << QVector<double>::fromStdVector(distribution.probabilities());
+#if 1
+	double min = map.firstKey(), max = map.lastKey();
+	int index = 0;
+	for (double p: distribution.probabilities()) {
+		if (p == min || p == max) {
+			Entry e = entryAt(index);
+			if (e.isValid())
+				qDebug() << (p == min ? "Min" : "Max")
+					 << p << e.word->weight(e.group->info)
+					 << e.word->fields;
+		}
+		index++;
+	}
+#endif
 }
