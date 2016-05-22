@@ -94,9 +94,13 @@ void MainWindow::openFile()
 
 void MainWindow::newWord()
 {
+	int retryCount = 3;
+retry:
 	Entry entry = manager.randomWord();
 	if (!entry.isValid())
 		return;
+	if (status.offset == entry.offset.global && retryCount--)
+		goto retry;
 	status.offset = entry.offset.global;
 
 	foreach (QLabel *label, labels)
