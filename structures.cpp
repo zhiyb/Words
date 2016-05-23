@@ -17,7 +17,7 @@ static const struct {
 	{"yes", -0.75f, QMetaType::Int},
 	{"no", 1.f, QMetaType::Int},
 	{"skip", 0.2f, QMetaType::Int},
-	{"time", -(1.f / 7.f / 24.f / 60.f / 60.f), QMetaType::QDateTime},
+	{"time", -(1.f / 24.f / 60.f / 60.f), QMetaType::QDateTime},
 }, *ptr;
 
 QJsonObject Info::toJsonObject() const
@@ -92,8 +92,8 @@ double Word::weight(const Info &info) const
 			break;
 		case QMetaType::QDateTime:
 			QVariant v = it.value();
-			w += exp((double)info.lastTime.secsTo(v.toDateTime()) * \
-					info.weights[it.key()]);
+			w += (double)info.lastTime.secsTo(v.toDateTime()) * \
+					info.weights[it.key()];
 			break;
 		}
 	}

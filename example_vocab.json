@@ -13,7 +13,7 @@
                     "index": 0
                 }
             },
-            "time": "2016-05-22T03:30:04",
+            "time": "2016-05-23T02:09:32",
             "type": {
                 "no": "int",
                 "skip": "int",
@@ -23,7 +23,7 @@
             "weight": {
                 "no": 1,
                 "skip": 0.20000000298023224,
-                "time": -1.6534391988898278e-06,
+                "time": -1.1574074051168282e-05,
                 "yes": -0.75
             }
         },
@@ -33,9 +33,9 @@
                     "meaning": "As a result or consequence of something.",
                     "no": 1,
                     "skip": 1,
-                    "time": "2016-05-22T03:30:04",
+                    "time": "2016-05-23T02:09:32",
                     "word": "consequently",
-                    "yes": 3
+                    "yes": 4
                 }
             ]
         }
