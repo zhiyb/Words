@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Words.Editor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Words"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid BorderBrush="Black" BorderThickness="1" Margin="8" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" MaxWidth="320"/>
+                <ColumnDefinition Width="1*" MaxWidth="1"/>
+                <ColumnDefinition Width="1*" MaxWidth="320"/>
+                <ColumnDefinition Width="1*" MaxWidth="1"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="Black" Grid.RowSpan="2" Grid.Column="1"/>
+            <Rectangle Fill="Black" Grid.RowSpan="2" Grid.Column="3"/>
+            <TextBlock Text="Group" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+            <TextBlock Text="Section" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+            <TextBlock Text="Items" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="4"/>
+            <ListBox Grid.Row="1" Grid.Column="0"/>
+            <ListBox Grid.Row="1" Grid.Column="2"/>
+            <ListBox Grid.Row="1" Grid.Column="4"/>
+        </Grid>
+        <Grid Margin="8" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Save" HorizontalAlignment="Center" Grid.Column="0"/>
+            <Button Content="Dummy" HorizontalAlignment="Center" Grid.Column="1"/>
+            <Button Content="Dummy" HorizontalAlignment="Center" Grid.Column="2"/>
+            <Button Content="Dummy" HorizontalAlignment="Center" Grid.Column="3"/>
+            <Button Content="Dummy" HorizontalAlignment="Center" Grid.Column="4"/>
+        </Grid>
+    </Grid>
+</Page>

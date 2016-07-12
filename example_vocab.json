@@ -1,0 +1,43 @@
+{
+    "English": {
+        "info": {
+            "groupWeight": 1,
+            "param": {
+                "meaning": {
+                    "font": "Calibri, 36",
+                    "index": 1
+                },
+                "word": {
+                    "font": "Calibri, 24",
+                    "hidden": true,
+                    "index": 0
+                }
+            },
+            "time": "2016-05-23T02:09:32",
+            "type": {
+                "no": "int",
+                "skip": "int",
+                "time": "QDateTime",
+                "yes": "int"
+            },
+            "weight": {
+                "no": 1,
+                "skip": 0.20000000298023224,
+                "time": -1.1574074051168282e-05,
+                "yes": -0.75
+            }
+        },
+        "payload": {
+            "Words": [
+                {
+                    "meaning": "As a result or consequence of something.",
+                    "no": 1,
+                    "skip": 1,
+                    "time": "2016-05-23T02:09:32",
+                    "word": "consequently",
+                    "yes": 4
+                }
+            ]
+        }
+    }
+}
